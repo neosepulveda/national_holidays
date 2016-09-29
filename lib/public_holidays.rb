@@ -1,10 +1,11 @@
 require "public_holidays/version"
+require 'date'
 
 module PublicHolidays
   class Italy
 
     def holidays_year(year)
-      self.ITA['single'][year]
+      ITA['single'][year]
     end
 
     def holidays_month(year, month)
@@ -12,9 +13,7 @@ module PublicHolidays
     end
 
     def is_public_holiday?(date)
-      (self.ITA['single'][date.year][:date][:day] == date.day) &&
-      (self.ITA['single'][date.year][:date][:month] == date.month) &&
-      (self.ITA['single'][date.year][:date][:year] == date.year)
+      !ITA['single'][date.year].detect {|f| (f[:date][:day] == date.day) && (f[:date][:month] == date.month) && (f[:date][:year] == date.year) }.nil?
     end
 
     ITA = {
@@ -126,5 +125,11 @@ module PublicHolidays
           ]
         }
       }
+
+      private
+
+      def get_date(date_in_hash)
+        Date.new(date_in_hash[:year], date_in_hash[:month], date_in_hash[:day])
+      end
   end
 end
