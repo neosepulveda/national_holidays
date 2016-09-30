@@ -13,7 +13,7 @@ module PublicHolidays
     end
 
     def public_holidays_year(year = Date.today.year)
-      @public_holidays.select { |ph| (ph.start_date.year == year) || (ph.end_date.year = year) }
+      @public_holidays.select { |ph| (ph.start_date.year == year) || (ph.end_date.year == year) }
     end
 
     def is_public_holiday?(date = Date.today)
