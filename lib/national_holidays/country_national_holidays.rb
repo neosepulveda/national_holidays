@@ -1,5 +1,5 @@
 require 'date'
-require 'national_holidays/public_holiday'
+require 'national_holidays/national_holiday'
 
 module NationalHolidays
   class CountryNationalHolidays
@@ -20,8 +20,8 @@ module NationalHolidays
       self.national_holidays(region).select { |ph| (ph.start_date.year == year) || (ph.end_date.year == year) }
     end
 
-    def is_public_holiday?(date = Date.today, region = 'all')
-      self.national_holidays(region).select { |ph| ph.is_public_holiday?(date) }.any?
+    def is_national_holiday?(date = Date.today, region = 'all')
+      self.national_holidays(region).select { |ph| ph.is_national_holiday?(date) }.any?
     end
 
     def regions

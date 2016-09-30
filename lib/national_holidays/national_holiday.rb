@@ -10,7 +10,7 @@ module NationalHolidays
       @english_name = english_name
     end
 
-    def is_public_holiday?(date = Date.today)
+    def is_national_holiday?(date = Date.today)
       self.range.include?(date)
     end
 
