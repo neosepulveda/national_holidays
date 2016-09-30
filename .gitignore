@@ -7,4 +7,5 @@
 /pkg/
 /spec/reports/
 /tmp/
-.swp
+*.swp
+public_holidays-0.1.0.gem
