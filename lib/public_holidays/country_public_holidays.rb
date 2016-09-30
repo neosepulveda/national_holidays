@@ -17,7 +17,7 @@ module PublicHolidays
     end
 
     def is_public_holiday?(date = Date.today)
-      @public_holidays.detect { |ph| ph.is_public_holiday? }
+      !@public_holidays.detect { |ph| ph.is_public_holiday? }.nil?
     end
 
   end
