@@ -2,14 +2,14 @@ module NationalHolidays
   module Countries
     class Italy < CountryNationalHolidays
 
-      def all
-        @all
+      def default
+        @default
       end
 
       def initialize
-        @regions = [ :all ]
+        @regions = [ 'Default' ]
 
-        @all = [
+        @default = [
           NationalHoliday.new(Date.new(2011, 1, 1), "Capodanno", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Epifania", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 3, 17), "150° anniversario della proclamazione dell'Unita' d'Italia", "150th anniversary of the unification of Italy"),

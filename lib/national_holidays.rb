@@ -6,15 +6,15 @@ require 'national_holidays/countries/united_kingdom'
 module NationalHolidays
 
   def self.available_countries
-    { "United Kingdom" => [ "England", "Wales" ],
-      "Italy" => ["All"] }
+    { "United Kingdom" => Countries::UnitedKingdom.new.regions,
+      "Italy" => Countries::Italy.new.regions }
   end
 
   def self.country(country)
     case country
     when 'Italy'
       Countries::Italy.new
-    when 'UnitedKingdom'
+    when 'United Kingdom'
       Countries::UnitedKingdom.new
     else
       Countries::UnitedKingdom.new

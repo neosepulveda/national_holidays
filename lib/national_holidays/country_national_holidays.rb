@@ -4,24 +4,24 @@ require 'national_holidays/national_holiday'
 module NationalHolidays
   class CountryNationalHolidays
 
-    def national_holidays(region = 'all')
+    def region(region = 'Default')
       region_national_holidays(region)
     end
 
     def region_national_holidays(region)
-      self.send(region.to_s)
+      self.send(region.to_s.downcase)
     end
 
-    def national_holidays_month(year = Date.today.year, month = Date.today.month, region = 'all')
+    def national_holidays_month(year = Date.today.year, month = Date.today.month, region = 'Default')
       self.national_holidays_year(year, region).select { |ph| (ph.start_date.month == month) || (ph.end_date.month == month) }
     end
 
-    def national_holidays_year(year = Date.today.year, region = 'all')
-      self.national_holidays(region).select { |ph| (ph.start_date.year == year) || (ph.end_date.year == year) }
+    def national_holidays_year(year = Date.today.year, region = 'Default')
+      self.region(region).select { |ph| (ph.start_date.year == year) || (ph.end_date.year == year) }
     end
 
-    def is_national_holiday?(date = Date.today, region = 'all')
-      self.national_holidays(region).select { |ph| ph.is_national_holiday?(date) }.any?
+    def is_national_holiday?(date = Date.today, region = 'Default')
+      self.region(region).select { |ph| ph.is_national_holiday?(date) }.any?
     end
 
     def regions
