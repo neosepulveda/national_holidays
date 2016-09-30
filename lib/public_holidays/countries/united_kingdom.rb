@@ -2,6 +2,10 @@ module PublicHolidays
   module Countries
     class UnitedKingdom < CountryPublicHolidays
 
+      def all
+        self.england + self.wales
+      end
+
       def england
         @england
       end
