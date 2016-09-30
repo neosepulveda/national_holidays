@@ -1,7 +1,7 @@
 require 'date'
 
-module PublicHolidays
-  class PublicHoliday
+module NationalHolidays
+  class NationalHoliday
 
     def initialize(start_date, end_date = start_date, local_name, english_name)
       @start_date = start_date

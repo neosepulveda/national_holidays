@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'public_holidays/version'
+require 'national_holidays/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "public_holidays"
-  spec.version       = PublicHolidays::VERSION
+  spec.name          = "national_holidays"
+  spec.version       = NationalHolidays::VERSION
   spec.authors       = ["neosepulveda"]
   spec.email         = ["israel.sepulveda.castillejo@gmail.com"]
 
