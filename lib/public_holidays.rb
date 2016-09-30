@@ -4,12 +4,9 @@ require 'public_holidays/countries/italy'
 require 'public_holidays/countries/united_kingdom'
 
 module PublicHolidays
-  class PublicHolidays
 
-    def self.available_countries
-      { "United Kingdom" => [ "England", "Wales" ],
-        "Italy" => ["All"] }
-    end
-
+  def self.available_countries
+    { "United Kingdom" => [ "England", "Wales" ],
+      "Italy" => ["All"] }
   end
 end
