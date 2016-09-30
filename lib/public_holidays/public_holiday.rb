@@ -2,7 +2,8 @@ require 'date'
 
 module PublicHolidays
   class PublicHoliday
-    def initialiaze(start_date, end_date, local_name, english_name)
+
+    def initialize(start_date, end_date = start_date, local_name, english_name)
       @start_date = start_date
       @end_date = end_date
       @local_name = local_name
@@ -11,6 +12,10 @@ module PublicHolidays
 
     def duration
       (@end_date - @start_date).to_i
+    end
+
+    def one_day?
+      self.duration == 0
     end
 
     def start_date
