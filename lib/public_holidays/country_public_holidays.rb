@@ -1,12 +1,8 @@
 require 'date'
-#require 'public_holidays/public_holiday'
+require 'public_holidays/public_holiday'
 
 module PublicHolidays
   class CountryPublicHolidays
-
-    def initialize(public_holidays)
-      @public_holidays = public_holidays
-    end
 
     def public_holidays
       @public_holidays
