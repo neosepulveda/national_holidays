@@ -5,10 +5,6 @@ module NationalHolidays
   class CountryNationalHolidays
 
     def region(region = 'Default')
-      region_national_holidays(region)
-    end
-
-    def region_national_holidays(region)
       self.send(region.to_s.downcase)
     end
 
