@@ -9,4 +9,15 @@ module NationalHolidays
     { "United Kingdom" => [ "England", "Wales" ],
       "Italy" => ["All"] }
   end
+
+  def self.national_holidays(country)
+    case country
+    when 'Italy'
+      Countries::Italy.new
+    when 'UnitedKingdom'
+      Countries::UnitedKingdom.new
+    else
+      Countries::UnitedKingdom.new
+    end
+  end
 end
