@@ -10,7 +10,7 @@ module NationalHolidays
       "Italy" => ["All"] }
   end
 
-  def self.national_holidays(country)
+  def self.country(country)
     case country
     when 'Italy'
       Countries::Italy.new
