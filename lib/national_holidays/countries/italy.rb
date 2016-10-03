@@ -5,7 +5,7 @@ module NationalHolidays
       attr_reader :lazio
 
       def default
-        @lazio
+        self.lazio
       end
 
       def initialize

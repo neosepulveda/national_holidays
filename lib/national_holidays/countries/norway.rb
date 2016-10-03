@@ -5,7 +5,7 @@ module NationalHolidays
       attr_reader :oslo
 
       def default
-        @oslo
+        self.oslo
       end
 
       def initialize

@@ -5,7 +5,7 @@ module NationalHolidays
       attr_reader :wien
 
       def default
-        @wien
+        self.wien
       end
 
       def initialize

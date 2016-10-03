@@ -5,7 +5,7 @@ module NationalHolidays
       attr_reader :area_metropolitana_de_lisboa
 
       def default
-        @area_metropolitana_de_lisboa
+        self.area_metropolitana_de_lisboa
       end
 
       def initialize

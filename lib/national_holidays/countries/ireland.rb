@@ -5,7 +5,7 @@ module NationalHolidays
       attr_reader :limerick
 
       def default
-        @limerick
+        self.limerick
       end
 
       def initialize
