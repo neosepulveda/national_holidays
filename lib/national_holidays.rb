@@ -4,6 +4,7 @@ require 'national_holidays/countries/italy'
 require 'national_holidays/countries/united_kingdom'
 require 'national_holidays/countries/norway'
 require 'national_holidays/countries/united_states'
+require 'national_holidays/countries/australia'
 
 module NationalHolidays
 
@@ -25,6 +26,8 @@ module NationalHolidays
       Countries::UnitedKingdom.new
     when 'United States'
       Countries::UnitedStates.new
+    when 'Australia'
+      Countries::Australia.new
     else
       Countries::UnitedKingdom.new
     end
