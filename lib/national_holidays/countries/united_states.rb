@@ -13,7 +13,7 @@ module NationalHolidays
       end
 
       def initialize
-        @regions = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
+        @regions = ["Default", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
           "Delaware", "District_of_columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
           "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
           "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New_hampshire", "New_jersey", "New_mexico",
