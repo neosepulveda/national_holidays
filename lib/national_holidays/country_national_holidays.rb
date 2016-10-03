@@ -25,7 +25,7 @@ module NationalHolidays
     end
 
     def number_of_regions
-      self.@regions.size
+      self.regions.size
     end
 
     def single_region?
