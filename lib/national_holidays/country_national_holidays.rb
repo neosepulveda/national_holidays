@@ -24,5 +24,13 @@ module NationalHolidays
       @regions
     end
 
+    def number_of_regions
+      self.regions.size
+    end
+
+    def single_region?
+      self.number_of_regions == 1
+    end
+
   end
 end
