@@ -14,12 +14,12 @@ module NationalHolidays
 
       def initialize
         @regions = ["Default", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
-          "Delaware", "District_of_columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+          "Delaware", "District Of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
           "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
-          "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New_hampshire", "New_jersey", "New_mexico",
-          "New_york", "North_carolina", "North_dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode_island",
-          "South_carolina", "South_dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia",
-          "Washington", "West_virginia", "Wisconsin", "Wyoming"]
+          "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico",
+          "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island",
+          "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia",
+          "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 
         @alabama = [
           NationalHoliday.new(Date.new(2011, 1, 17), "Robert E. Lee, Martin Luther King, Jr.'s Birthday", "Robert E. Lee, Martin Luther King, Jr.'s Birthday"),
