@@ -9,7 +9,9 @@ module NationalHolidays
     when :verbose
       Countries.countries.map { |country| self.verbose(country) }
     when :table
-      Countries.countries.map { |country| self.table(country) }
+      table = Array.new
+      Countries.countries.each { |country| table.concat(self.table(country)) }
+      table
     else
       Countries.countries.map { |country| self.verbose(country) }
     end
