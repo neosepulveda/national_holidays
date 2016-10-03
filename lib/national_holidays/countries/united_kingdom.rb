@@ -2,20 +2,14 @@ module NationalHolidays
   module Countries
     class UnitedKingdom < CountryNationalHolidays
 
+      attr_reader :england, :wales
+
       def default
-        self.england + self.wales
-      end
-
-      def england
-        @england
-      end
-
-      def wales
-        @wales
+        self.england
       end
 
       def initialize
-        @regions = [ 'England', 'Wales' ]
+        @regions = [ 'Default', 'England', 'Wales' ]
 
         @england = [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
