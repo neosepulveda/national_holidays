@@ -1,47 +1,31 @@
 require "national_holidays/version"
 require 'national_holidays/country_national_holidays'
-require 'national_holidays/countries/italy'
-require 'national_holidays/countries/united_kingdom'
-require 'national_holidays/countries/norway'
-require 'national_holidays/countries/united_states'
-require 'national_holidays/countries/portugal'
-require 'national_holidays/countries/france'
-require 'national_holidays/countries/ireland'
-require 'national_holidays/countries/austria'
-require 'national_holidays/countries/australia'
+require 'national_holidays/countries'
 
 module NationalHolidays
 
   def self.available_countries
-    { "United Kingdom" => Countries::UnitedKingdom.new.regions,
-      "Italy" => Countries::Italy.new.regions,
-      "Norway" => Countries::Norway.new.regions,
-      "United States" => Countries::UnitedStates.new.regions
-    }
+    Countries.countries.map { |country| { Countries.to_human_format(country) => Countries.country(country).regions } }
+  end
+
+  def self.regions_of_country(country)
+    Countries.country(country).regions
+  end
+
+  def self.country_of_region(region)
+    Countries.to_human_format(Countries.reverse_search(Countries.to_human_format(region)))
   end
 
   def self.country(country)
-    case country
-    when 'Norway'
-      Countries::Norway.new
-    when 'Italy'
-      Countries::Italy.new
-    when 'United Kingdom'
-      Countries::UnitedKingdom.new
-    when 'United States'
-      Countries::UnitedStates.new
-    when 'Portugal'
-      Countries::Portugal.new
-    when 'France'
-      Countries::France.new
-    when 'Ireland'
-      Countries::Ireland.new
-    when 'Austria'
-      Countries::Austria.new
-    when 'Australia'
-      Countries::Australia.new
-    else
-      Countries::UnitedKingdom.new
-    end
+    Countries.country(country)
   end
+
+  def self.region(region)
+    Countries.region(region)
+  end
+
+  def self.search(str)
+    Countries.holidays_country_or_region(str)
+  end
+
 end
