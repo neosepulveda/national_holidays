@@ -2,14 +2,16 @@ module NationalHolidays
   module Countries
     class Ireland < CountryNationalHolidays
 
+      attr_reader :limerick
+
       def default
-        @default
+        @limerick
       end
 
       def initialize
-        @regions = [ 'Default' ]
+        @regions = [ 'Limerick' ]
 
-        @default = [
+        @limerick = [
           NationalHoliday.new(Date.new(2011, 1, 1), "Lá Caille or Lá Bliana Nua", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 3, 17), "Lá Fhéile Pádraig", "Saint Patrick's Day"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Luan Cásca", "Easter Monday"),

@@ -2,14 +2,16 @@ module NationalHolidays
   module Countries
     class Portugal < CountryNationalHolidays
 
+      attr_reader :area_metropolitana_de_lisboa
+
       def default
-        @default
+        @area_metropolitana_de_lisboa
       end
 
       def initialize
-        @regions = [ 'Default' ]
+        @regions = [ 'Área Metropolitana de Lisboa' ]
 
-        @default = [
+        @area_metropolitana_de_lisboa = [
           NationalHoliday.new(Date.new(2011, 1, 1), "Ano Novo", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 3, 8), "Carnaval", "Carnival (Shrove Tuesday)"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Sexta-feira Santa", "Good Friday"),

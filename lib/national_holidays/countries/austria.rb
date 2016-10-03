@@ -2,14 +2,16 @@ module NationalHolidays
   module Countries
     class Austria < CountryNationalHolidays
 
+      attr_reader :wien
+
       def default
-        @default
+        @wien
       end
 
       def initialize
-        @regions = [ 'Default' ]
+        @regions = [ 'Wien' ]
 
-        @default = [
+        @wien = [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahr", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Heilige Drei Könige", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),

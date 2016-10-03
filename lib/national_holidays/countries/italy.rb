@@ -2,14 +2,16 @@ module NationalHolidays
   module Countries
     class Italy < CountryNationalHolidays
 
+      attr_reader :lazio
+
       def default
-        @default
+        @lazio
       end
 
       def initialize
-        @regions = [ 'Default' ]
+        @regions = [ 'Lazio' ]
 
-        @default = [
+        @lazio = [
           NationalHoliday.new(Date.new(2011, 1, 1), "Capodanno", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Epifania", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 3, 17), "150° anniversario della proclamazione dell'Unita' d'Italia", "150th anniversary of the unification of Italy"),
