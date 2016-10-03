@@ -5,7 +5,7 @@ module NationalHolidays
   class CountryNationalHolidays
 
     def region(region = 'Default')
-      self.send(region.to_s.downcase.tr(" ", "_"))
+      self.regions.include?(region) ? self.send(region.to_s.downcase.tr(" ", "_")) : nil
     end
 
     def national_holidays_month(year = Date.today.year, month = Date.today.month, region = 'Default')
