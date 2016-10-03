@@ -10,7 +10,7 @@ module NationalHolidays
       end
 
       def initialize
-        @regions = [ 'Default', "Australian Capital Territory", "Queensland", "New South Wales", "Northern Territory",
+        @regions = [ "Australian Capital Territory", "Queensland", "New South Wales", "Northern Territory",
           "South Australia", "Tasmania", "Victoria", "Western Australia" ]
 
         @australian_capital_territory = [

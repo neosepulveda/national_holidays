@@ -9,7 +9,7 @@ module NationalHolidays
       end
 
       def initialize
-        @regions = [ 'Default', 'Alsace', 'Moselle' ]
+        @regions = [ 'Alsace', 'Moselle' ]
 
         @alsace = [
           NationalHoliday.new(Date.new(2011, 1, 1), "Premier de l'an / Jour de l' an", "New Year's Day"),
