@@ -48,7 +48,7 @@ module NationalHolidays
   end
 
   def self.table_row(country, region)
-    { 'country' => Countries.to_human_format(country), 'region' => region }
+    { country: Countries.to_human_format(country), region: region }
   end
 
 end
