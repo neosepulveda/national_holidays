@@ -25,7 +25,7 @@ module NationalHolidays
     end
 
     def self.countries
-      ["australia", "austria", "france", "ireland", "italy", "norway", "portugal", "united_kingdom", "united_states"]
+      ["australia", "austria", "france", "germany", "ireland", "italy", "norway", "portugal", "united_kingdom", "united_states"]
     end
 
     def self.country(country)
