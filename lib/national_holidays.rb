@@ -40,7 +40,7 @@ module NationalHolidays
   private
 
   def self.verbose(country)
-    { 'country' => Countries.to_human_format(country), 'regions' => Countries.country(country).regions }
+    { country: Countries.to_human_format(country), regions: Countries.country(country).regions }
   end
 
   def self.table(country)
