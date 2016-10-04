@@ -7,6 +7,7 @@ require 'national_holidays/countries/france'
 require 'national_holidays/countries/ireland'
 require 'national_holidays/countries/austria'
 require 'national_holidays/countries/australia'
+require 'national_holidays/countries/germany'
 
 module NationalHolidays
   module Countries
@@ -24,7 +25,7 @@ module NationalHolidays
     end
 
     def self.countries
-      ["australia", "austria", "france", "ireland", "italy", "norway", "portugal", "united_kingdom", "united_states"]
+      ["australia", "austria", "france", "germany", "ireland", "italy", "norway", "portugal", "united_kingdom", "united_states"]
     end
 
     def self.country(country)
