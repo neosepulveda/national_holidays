@@ -7,6 +7,7 @@ require 'national_holidays/countries/france'
 require 'national_holidays/countries/ireland'
 require 'national_holidays/countries/austria'
 require 'national_holidays/countries/australia'
+require 'national_holidays/countries/germany'
 
 module NationalHolidays
   module Countries
