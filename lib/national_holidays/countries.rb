@@ -24,12 +24,10 @@ module NationalHolidays
   module Countries
 
     def self.holidays_country_or_region(str)
-      if str.nil?
+      if str.nil? || str.empty?
         nil
-      elsif str.empty? || str.downcase == 'default'
-        nil
-      elsif self.countries.include?(str.downcase.tr(" ", "_"))
-        self.country(str).region('Default')
+      elsif self.countries.include?(str.to_s.downcase.tr(" ", "_"))
+        self.country(str).default
       else
         self.region(str)
       end
@@ -49,14 +47,15 @@ module NationalHolidays
     end
 
     def self.region(region)
-      reg = self.to_human_format(region)
-      country = self.reverse_search(reg)
+      country = self.reverse_search(region)
 
-      self.country(country).region(reg) unless country.nil?
+      self.country(country).region(region) unless country.nil?
     end
 
     def self.reverse_search(region)
-      country = self.countries_and_regions.select { |country, regions| regions.include?(region) }.keys.first
+      country = self.countries_and_regions.select { |row| self.reverse_search_row_selector(row, region) }
+
+      country.first[:country] unless country.empty?
     end
 
     def self.countries_and_regions
@@ -67,11 +66,15 @@ module NationalHolidays
     end
 
     def self.to_class_format(str)
-      str.tr("_", " ").split.map(&:capitalize).join('')
+      str.to_s.tr("_", " ").split.map(&:capitalize).join('')
     end
 
     def self.to_human_format(str)
-      str.tr("_", " ").split.map(&:capitalize).join(' ')
+      str.to_s.tr("_", " ").split.map(&:capitalize).join(' ')
+    end
+
+    def self.reverse_search_row_selector(row, str)
+      row[:regions][:region_code].include?(str) || row[:regions][:region_name].include?(str)
     end
 
   end
