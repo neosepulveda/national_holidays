@@ -2,16 +2,16 @@ module NationalHolidays
   module Countries
     class Croatia < Country
 
-      attr_reader :zagreb
-
       def default
-        self.zagreb
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Zagreb' ]
+        @regions = [ Region.new('Croatia (all)', 'croatia01', self.zagreb) ]
+      end
 
-        @zagreb = [
+      def zagreb
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Nova Godina", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Bogojavljanje ili Sveta tri kralja", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 4, 24), "Uskrs", "Easter Sunday"),

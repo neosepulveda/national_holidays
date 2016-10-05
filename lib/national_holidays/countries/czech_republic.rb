@@ -2,16 +2,16 @@ module NationalHolidays
   module Countries
     class CzechRepublic < Country
 
-      attr_reader :prague
-
       def default
-        self.prague
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Prague' ]
+        @regions = [ Region.new('Czech Republic (all)', 'czech_republic01', self.prague) ]
+      end
 
-        @prague = [
+      def prague
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Den obnovy samostatného českého státu", "Restoration Day of the Independent Czech State"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Velikonoční pondělí", "Easter Monday"),
           NationalHoliday.new(Date.new(2011, 5, 1), "Svátek práce", "Labour Day"),

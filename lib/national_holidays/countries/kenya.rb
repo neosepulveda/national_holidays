@@ -2,16 +2,16 @@ module NationalHolidays
   module Countries
     class Kenya < Country
 
-      attr_reader :nairobi_county
-
       def default
         self.nairobi_county
       end
 
       def initialize
-        @regions = [ 'Nairobi County' ]
+        @regions = [ Region.new('Kenya (all)', 'kenya01', self.nairobi_county) ]
+      end
 
-        @nairobi_county = [
+      def  nairobi_county
+        [
           NationalHoliday.new(Date.new(2016, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2016, 3, 25), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2016, 3, 28), "Easter Monday", "Easter Monday"),

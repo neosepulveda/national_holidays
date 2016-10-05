@@ -2,16 +2,16 @@ module NationalHolidays
   module Countries
     class Colombia < Country
 
-      attr_reader :bbuenos_aires
-
       def default
-        self.bbuenos_aires
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Buenos Aires' ]
+        @regions = [ Region.new('Colombia (all)', 'colombia01', self.bogota) ]
+      end
 
-        @buenos_aires = [
+      def bogota
+        [
           NationalHoliday.new(Date.new(2016, 1, 1), "Año Nuevo", "New Year's Day"),
           NationalHoliday.new(Date.new(2016, 1, 11), "Día de los Reyes Magos", "Epiphany"),
           NationalHoliday.new(Date.new(2016, 3, 20), "Domingo de Ramos", "Palm Sunday"),
@@ -514,6 +514,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Navidad", "Christmas Day")
         ]
       end
+      
     end
   end
 end

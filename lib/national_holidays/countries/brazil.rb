@@ -2,16 +2,16 @@ module NationalHolidays
   module Countries
     class Brazil < Country
 
-      attr_reader :rio_de_janeiro
-
       def default
-        self.rio_de_janeiro
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Rio de Janeiro' ]
+        @regions = [ Region.new('Brazil (all)', 'brazil01', self.rio_de_janeiro) ]
+      end
 
-        @rio_de_janeiro = [
+      def rio_de_janeiro
+       [
           NationalHoliday.new(Date.new(2016, 1, 1), "Ano Novo / Confraternizaçao Universal", "New Year's Day"),
           NationalHoliday.new(Date.new(2016, 2, 8), "Carnaval", "Carnival"),
           NationalHoliday.new(Date.new(2016, 2, 9), "Carnaval", "Carnival"),
@@ -392,6 +392,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Natal", "Christmas Day")
         ]
       end
+      
     end
   end
 end

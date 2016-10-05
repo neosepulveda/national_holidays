@@ -375,6 +375,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 26), "Santo Stefano", "St Stephen's Day")
         ]
       end
+
     end
   end
 end

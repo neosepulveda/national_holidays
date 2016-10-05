@@ -2,16 +2,16 @@ module NationalHolidays
   module Countries
     class Ethiopia < Country
 
-      attr_reader :addis_abeba
-
       def default
-        self.addis_abeba
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Addis Abeba' ]
+        @regions = [ Region.new('Ethiopia (all)', 'ethiopia01', self.addis_abeba) ]
+      end
 
-        @addis_abeba = [
+      def addis_abeba
+        [
           NationalHoliday.new(Date.new(2016, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2016, 1, 7), "Genna", "Christmas"),
           NationalHoliday.new(Date.new(2016, 1, 20), "Timkat", "Epiphany"),
@@ -34,6 +34,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2017, 9, 27), "Meskel", "Finding of the True Cross")
         ]
       end
+      
     end
   end
 end
