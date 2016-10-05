@@ -53,11 +53,11 @@ module NationalHolidays
     end
 
     def regions_code
-      self.regions.map(&:regions_code)
+      self.regions.map(&:region_code)
     end
 
     def regions_name
-      self.regions.map(&:regions_name)
+      self.regions.map(&:region_name)
     end
   end
 end

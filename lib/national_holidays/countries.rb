@@ -44,6 +44,7 @@ module NationalHolidays
     end
 
     def self.country(country)
+      #TODO: put it in a try method
       eval(self.to_class_format(country)).new
     end
 
