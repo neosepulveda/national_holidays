@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class CzechRepublic < CountryNationalHolidays
+    class CzechRepublic < Country
 
       attr_reader :prague
 

@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Ethiopia < CountryNationalHolidays
+    class Ethiopia < Country
 
       attr_reader :addis_abeba
 

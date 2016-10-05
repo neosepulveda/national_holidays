@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Croatia < CountryNationalHolidays
+    class Croatia < Country
 
       attr_reader :zagreb
 

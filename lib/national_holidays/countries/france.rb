@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class France < CountryNationalHolidays
+    class France < Country
 
       attr_reader :alsace, :moselle
 

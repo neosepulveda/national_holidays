@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Italy < CountryNationalHolidays
+    class Italy < Country
 
       def default
         self.regions.first

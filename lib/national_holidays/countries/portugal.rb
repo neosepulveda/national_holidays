@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Portugal < CountryNationalHolidays
+    class Portugal < Country
 
       attr_reader :area_metropolitana_de_lisboa
 

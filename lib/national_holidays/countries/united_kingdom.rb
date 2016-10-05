@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class UnitedKingdom < CountryNationalHolidays
+    class UnitedKingdom < Country
 
       attr_reader :england, :wales, :scotland, :northern_ireland
 

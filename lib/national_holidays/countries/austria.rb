@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Austria < CountryNationalHolidays
+    class Austria < Country
 
       attr_reader :wien
 

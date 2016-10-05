@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Angola < CountryNationalHolidays
+    class Angola < Country
 
       attr_reader :luanda
 

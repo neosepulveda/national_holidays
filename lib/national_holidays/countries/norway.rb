@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Norway < CountryNationalHolidays
+    class Norway < Country
 
       attr_reader :oslo
 

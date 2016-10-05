@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Kenya < CountryNationalHolidays
+    class Kenya < Country
 
       attr_reader :nairobi_county
 

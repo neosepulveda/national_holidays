@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Australia < CountryNationalHolidays
+    class Australia < Country
 
       attr_reader :australian_capital_territory, :queensland, :new_south_wales, :nothern_territory,
       :south_australia, :tasmania, :victoria, :western_australia

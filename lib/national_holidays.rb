@@ -1,5 +1,5 @@
 require "national_holidays/version"
-require 'national_holidays/country_national_holidays'
+require 'national_holidays/country'
 require 'national_holidays/countries'
 
 module NationalHolidays

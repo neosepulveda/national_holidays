@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Ireland < CountryNationalHolidays
+    class Ireland < Country
 
       attr_reader :limerick
 

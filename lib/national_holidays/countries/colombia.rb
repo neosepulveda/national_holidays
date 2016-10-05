@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Colombia < CountryNationalHolidays
+    class Colombia < Country
 
       attr_reader :bbuenos_aires
 

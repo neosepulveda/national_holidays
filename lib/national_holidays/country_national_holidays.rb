@@ -2,7 +2,7 @@ require 'national_holidays/national_holiday'
 require 'national_holidays/region'
 
 module NationalHolidays
-  class CountryNationalHolidays
+  class Country
 
     attr_reader :regions
 

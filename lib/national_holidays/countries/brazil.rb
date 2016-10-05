@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Brazil < CountryNationalHolidays
+    class Brazil < Country
 
       attr_reader :rio_de_janeiro
 

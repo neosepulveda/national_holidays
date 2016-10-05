@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Belgium < CountryNationalHolidays
+    class Belgium < Country
 
       attr_reader :brussels
 

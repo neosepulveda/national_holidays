@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class UnitedStates < CountryNationalHolidays
+    class UnitedStates < Country
 
       attr_reader :alabama, :alaska, :arizona, :arkansas, :california, :colorado, :connecticut, :delaware, :district_of_columbia, :florida,
                   :georgia, :hawaii, :idaho, :illinois, :indiana, :iowa, :kansas, :kentucky, :louisiana, :maine, :maryland, :massachusetts, :michigan,

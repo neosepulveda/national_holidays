@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Germany < CountryNationalHolidays
+    class Germany < Country
 
       attr_reader :baden_wurttemberg, :bavaria, :berlin, :brandenburg,
                   :bremen, :hamburg, :hesse, :mecklenburg_vorpommern, :lower_saxony,

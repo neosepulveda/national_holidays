@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class Canada < CountryNationalHolidays
+    class Canada < Country
 
       attr_reader :alberta, :british_columbia, :manitoba, :new_brunswick,
                   :newfoundland_and_labrador, :northwest_territories,

@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class India < CountryNationalHolidays
+    class India < Country
 
       attr_reader :delhi
 

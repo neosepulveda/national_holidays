@@ -1,6 +1,6 @@
 module NationalHolidays
   module Countries
-    class China < CountryNationalHolidays
+    class China < Country
 
       attr_reader :beijing_municipality
 
