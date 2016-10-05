@@ -3,19 +3,19 @@ module NationalHolidays
     class Australia < Country
 
       def default
-        self.australian_capital_territory
+        self.regions.first
       end
 
       def initialize
         @regions = [
-          Region.new('Australian Capital Territory', 'italy01', self.australian_capital_territory)
-          Region.new('Queensland', 'italy01', self.queensland)
-          Region.new('New South Wales', 'italy01', self.new_south_wales)
-          Region.new('Northern Territory', 'italy01', self.northern_territory)
-          Region.new('South Australia', 'italy01', self.south_australia)
-          Region.new('Tasmania', 'italy01', self.tasmania)
-          Region.new('Victoria', 'italy01', self.victoria)
-          Region.new('Western Australia', 'italy01', self.western_australia)
+          Region.new('Australian Capital Territory', 'australia01', self.australian_capital_territory),
+          Region.new('Queensland', 'australia02', self.queensland),
+          Region.new('New South Wales', 'australia03', self.new_south_wales),
+          Region.new('Northern Territory', 'australia04', self.northern_territory),
+          Region.new('South Australia', 'australia05', self.south_australia),
+          Region.new('Tasmania', 'australia06', self.tasmania),
+          Region.new('Victoria', 'australia07', self.victoria),
+          Region.new('Western Australia', 'australia08', self.western_australia),
         ]
       end
 
@@ -3184,7 +3184,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
       end
-      
+
     end
   end
 end
