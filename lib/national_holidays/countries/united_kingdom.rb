@@ -1,17 +1,22 @@
 module NationalHolidays
   module Countries
-    class UnitedKingdom < CountryNationalHolidays
-
-      attr_reader :england, :wales, :scotland, :northern_ireland
+    class UnitedKingdom < Country
 
       def default
-        self.england
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'England', 'Wales', 'Scotland', 'Northern Ireland' ]
+        @regions = [
+          Region.new('England', 'united_kingdom01', self.england),
+          Region.new('Wales', 'united_kingdom02', self.wales),
+          Region.new('Scotland', 'united_kingdom03', self.scotland),
+          Region.new('Northern Ireland', 'united_kingdom04', self.northern_ireland)
+         ]
+      end
 
-        @england = [
+      def england
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Easter Monday", "Easter Monday"),
@@ -255,8 +260,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @wales = [
+      def wales
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Easter Monday", "Easter Monday"),
@@ -500,8 +507,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @scotland = [
+      def scotland
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 4), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Easter Monday", "Easter Monday"),
@@ -697,8 +706,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2034, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2034, 12, 26), "Boxing Day", "Boxing Day"),
         ]
+      end
 
-        @northern_ireland = [
+      def northern_ireland
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 3, 17), "St. Patrick's Day", "St. Patrick's Day"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Easter Monday", "Easter Monday"),
@@ -944,6 +955,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2034, 12, 26), "Boxing Day", "Boxing Day")
         ]
       end
+
     end
   end
 end

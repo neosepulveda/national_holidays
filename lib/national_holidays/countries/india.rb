@@ -1,17 +1,17 @@
 module NationalHolidays
   module Countries
-    class India < CountryNationalHolidays
-
-      attr_reader :delhi
+    class India < Country
 
       def default
-        self.delhi
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Delhi' ]
+        @regions = [ Region.new('India (all)', 'india01', self.delhi) ]
+      end
 
-        @delhi = [
+      def delhi
+        [
           NationalHoliday.new(Date.new(2016, 1, 26), "Republic Day", "Republic Day"),
           NationalHoliday.new(Date.new(2016, 8, 15), "Independence Day", "Independence Day"),
           NationalHoliday.new(Date.new(2016, 2, 8), "Gandhi Jayanti", "Gandhi Jayanti"),

@@ -1,25 +1,34 @@
 module NationalHolidays
   module Countries
-    class Germany < CountryNationalHolidays
-
-      attr_reader :baden_wurttemberg, :bavaria, :berlin, :brandenburg,
-                  :bremen, :hamburg, :hesse, :mecklenburg_vorpommern, :lower_saxony,
-                  :north_rhine_westphalia, :rhineland_palatinate, :saarland, :saxony,
-                  :saxony_anhalt, :schleswig_holstein, :thuringia
+    class Germany < Country
 
       def default
-        self.berlin
+        self.regions[2]
       end
 
       def initialize
         @regions = [
-          "Baden Wurttemberg", "Bavaria", "Berlin", "Brandenburg",
-          "Bremen", "Hamburg", "Hesse", "Mecklenburg Vorpommern", "Lower Saxony",
-          "North Rhine Westphalia", "Rhineland Palatinate", "Saarland", "Saxony",
-          "Saxony Anhalt", "Schleswig Holstein", "Thuringia"
+          Region.new('Baden Wurttemberg', 'germany01', self.baden_wurttemberg),
+          Region.new('Bavaria', 'germany02', self.bavaria),
+          Region.new('Berlin', 'germany03', self.berlin),
+          Region.new('Brandenburg', 'germany04', self.brandenburg),
+          Region.new('Bremen', 'germany05', self.bremen),
+          Region.new('Hamburg', 'germany06', self.hamburg),
+          Region.new('Hesse', 'germany07', self.hesse),
+          Region.new('Mecklenburg Vorpommern', 'germany08', self.mecklenburg_vorpommern),
+          Region.new('Lower Saxony', 'germany09', self.lower_saxony),
+          Region.new('North Rhine Westphalia', 'germany10', self.north_rhine_westphalia),
+          Region.new('Rhineland Palatinate', 'germany11', self.rhineland_palatinate),
+          Region.new('Saarland', 'germany12', self.saarland),
+          Region.new('Saxony', 'germany13', self.saxony),
+          Region.new('Saxony Anhalt', 'germany14', self.saxony_anhalt),
+          Region.new('Schleswig Holstein', 'germany13', self.schleswig_holstein),
+          Region.new('Thuringia', 'germany14', self.thuringia)
         ]
+      end
 
-        @baden_wurttemberg = [
+      def baden_wurttemberg
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Heilige Drei Könige", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
@@ -381,8 +390,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @bavaria = [
+      def bavaria
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Heilige Drei Könige", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
@@ -804,8 +815,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @berlin = [
+      def berlin
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -1077,8 +1090,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @brandenburg = [
+      def brandenburg
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -1380,8 +1395,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @bremen = [
+      def bremen
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -1653,8 +1670,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @hamburg = [
+      def hamburg
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -1926,8 +1945,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @hesse = [
+      def hesse
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -2229,8 +2250,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @mecklenburg_vorpommern = [
+      def mecklenburg_vorpommern
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -2532,8 +2555,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @lower_saxony = [
+      def lower_saxony
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -2805,8 +2830,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @north_rhine_westphalia = [
+      def north_rhine_westphalia
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -3138,8 +3165,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @rhineland_palatinate = [
+      def rhineland_palatinate
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -3471,8 +3500,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @saarland = [
+      def saarland
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -3834,8 +3865,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @saxony = [
+      def saxony
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -4197,8 +4230,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @saxony_anhalt = [
+      def saxony_anhalt
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 6), "Heilige Drei Könige", "Epiphany"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
@@ -4530,8 +4565,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @schleswig_holstein = [
+      def schleswig_holstein
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -4803,8 +4840,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Weihnachtstag", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
+      end
 
-        @thuringia = [
+      def thuringia
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Neujahrstag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Karfreitag", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Ostermontag", "Easter Monday"),
@@ -5137,6 +5176,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 26), "Zweiter Weihnachtsfeiertag", "St. Stephen's Day")
         ]
       end
+
     end
   end
 end

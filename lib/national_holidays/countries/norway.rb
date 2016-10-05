@@ -1,17 +1,17 @@
 module NationalHolidays
   module Countries
-    class Norway < CountryNationalHolidays
-
-      attr_reader :oslo
+    class Norway < Country
 
       def default
-        self.oslo
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Oslo' ]
+        @regions = [ Region.new('Norway (all)', 'norway01', self.oslo) ]
+      end
 
-        @oslo = [
+      def oslo
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Første nyttårsdag", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 21), "Skjærtorsdag", "Maundy Thursday"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Langfredag", "Good Friday"),

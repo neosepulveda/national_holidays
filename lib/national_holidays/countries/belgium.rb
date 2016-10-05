@@ -1,17 +1,17 @@
 module NationalHolidays
   module Countries
-    class Belgium < CountryNationalHolidays
-
-      attr_reader :brussels
+    class Belgium < Country
 
       def default
-        self.brussels
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Brussels' ]
+        @regions = [ Region.new('Belgium (all)', 'belgium01', self.brussels) ]
+      end
 
-        @brussels = [
+      def brussels
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Nieuwjaar / Nouvel An / Neujahr", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 24), "Pasen / Pâques / Ostern", "Easter Sunday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Paasmaandag / Lundi de Pâques / Ostermontag", "Easter Monday"),
@@ -374,6 +374,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Kerstmis / Noël / Weihnachten", "Christmas Day")
         ]
       end
+      
     end
   end
 end

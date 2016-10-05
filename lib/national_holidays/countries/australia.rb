@@ -1,19 +1,26 @@
 module NationalHolidays
   module Countries
-    class Australia < CountryNationalHolidays
-
-      attr_reader :australian_capital_territory, :queensland, :new_south_wales, :nothern_territory,
-      :south_australia, :tasmania, :victoria, :western_australia
+    class Australia < Country
 
       def default
-        self.australian_capital_territory
+        self.regions.first
       end
 
       def initialize
-        @regions = [ "Australian Capital Territory", "Queensland", "New South Wales", "Northern Territory",
-          "South Australia", "Tasmania", "Victoria", "Western Australia" ]
+        @regions = [
+          Region.new('Australian Capital Territory', 'australia01', self.australian_capital_territory),
+          Region.new('Queensland', 'australia02', self.queensland),
+          Region.new('New South Wales', 'australia03', self.new_south_wales),
+          Region.new('Northern Territory', 'australia04', self.northern_territory),
+          Region.new('South Australia', 'australia05', self.south_australia),
+          Region.new('Tasmania', 'australia06', self.tasmania),
+          Region.new('Victoria', 'australia07', self.victoria),
+          Region.new('Western Australia', 'australia08', self.western_australia),
+        ]
+      end
 
-        @australian_capital_territory = [
+      def australian_capital_territory
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
           NationalHoliday.new(Date.new(2011, 3, 14), "Canberra Day", "Canberra Day"),
@@ -423,8 +430,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @queensland = [
+      def queensland
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
@@ -785,8 +794,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @new_south_wales = [
+      def new_south_wales
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
@@ -1174,8 +1185,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @northern_territory = [
+      def northern_territory
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
@@ -1644,8 +1657,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @south_australia = [
+      def south_australia
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
           NationalHoliday.new(Date.new(2011, 3, 14), "Adelaide Cup", "Adelaide Cup"),
@@ -2063,8 +2078,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Proclamation Day", "Boxing Day / Proclamation Day"),
           NationalHoliday.new(Date.new(2040, 12, 31), "New Year's Eve", "New Year's Eve")
         ]
+      end
 
-        @tasmania = [
+      def tasmania
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
           NationalHoliday.new(Date.new(2011, 2, 14), "Royal Hobart Regatta", "Royal Hobart Regatta"),
@@ -2440,8 +2457,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @victoria = [
+      def victoria
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
@@ -2819,8 +2838,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
+      end
 
-        @western_australia = [
+      def western_australia
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 26), "Australia Day", "Australia Day"),
@@ -3163,6 +3184,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day", "Boxing Day")
         ]
       end
+
     end
   end
 end

@@ -1,17 +1,17 @@
 module NationalHolidays
   module Countries
-    class China < CountryNationalHolidays
-
-      attr_reader :beijing_municipality
+    class China < Country
 
       def default
-        self.beijing_municipality
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Beijing Municipality' ]
+        @regions = [ Region.new('China (all)', 'china01', self.beijing_municipality) ]
+      end
 
-        @beijing_municipality = [
+      def beijing_municipality
+        [
           NationalHoliday.new(Date.new(2013, 1, 1), "元旦", "New Year's Day"),
           NationalHoliday.new(Date.new(2013, 1, 2), "元旦", "New Year Holiday"),
           NationalHoliday.new(Date.new(2013, 1, 3), "元旦", "New Year Holiday"),
@@ -824,6 +824,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 10, 7), "国庆节", "National Day Holiday")
         ]
       end
+
     end
   end
 end

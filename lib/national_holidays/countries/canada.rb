@@ -1,22 +1,31 @@
 module NationalHolidays
   module Countries
-    class Canada < CountryNationalHolidays
-
-      attr_reader :alberta, :british_columbia, :manitoba, :new_brunswick,
-                  :newfoundland_and_labrador, :northwest_territories,
-                  :nova_scotia, :nunavut, :ontario, :prince_edward_island,
-                  :quebec, :saskatchewan, :yukon
+    class Canada < Country
 
       def default
-        self.ontario
+        self.regions[8]
       end
 
       def initialize
-        @regions = ["Alberta", "British Columbia", "Manitoba", "New Brunswick",
-          "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia",
-          "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"]
+        @regions = [
+          Region.new('Alberta', 'canada01', self.alberta),
+          Region.new('British Columbia', 'canada02', self.british_columbia),
+          Region.new('Manitoba', 'canada03', self.manitoba),
+          Region.new('New Brunswick', 'canada04', self.new_brunswick),
+          Region.new('Newfoundland and Labrador5', 'canada0', self.newfoundland_and_labrador),
+          Region.new('Northwest Territories', 'canada06', self.northwest_territories),
+          Region.new('Nova Scotia', 'canada07', self.nova_scotia),
+          Region.new('Nunavut', 'canada08', self.nunavut),
+          Region.new('Ontario', 'canada09', self.ontario),
+          Region.new('Prince Edward Island', 'canada10', self.prince_edward_island),
+          Region.new('Quebec', 'canada11', self.quebec),
+          Region.new('Saskatchewan', 'canada12', self.saskatchewan),
+          Region.new('Yukon', 'canada13', self.yukon)
+        ]
+      end
 
-        @alberta = [
+      def alberta
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Alberta Family Day / Fête de la famille", "Alberta Family Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
@@ -378,8 +387,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @british_columbia = [
+      def british_columbia
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 23), "Victoria Day / Fête de la Reine ou Journée nationale des Patriotes", "Victoria Day"),
@@ -679,8 +690,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 11), "Remembrance Day / Jour du Souvenir", "Remembrance Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day")
         ]
+      end
 
-        @manitoba = [
+      def manitoba
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Louis Riel Day / La Journée Louis Riel", "Louis Riel Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
@@ -1042,8 +1055,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @new_brunswick = [
+      def new_brunswick
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 23), "Victoria Day / Fête de la Reine ou Journée nationale des Patriotes", "Victoria Day"),
@@ -1345,8 +1360,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @newfoundland_and_labrador = [
+      def newfoundland_and_labrador
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 3, 14), "St. Patrick’s Day / Fête de la Saint-Patrick", "St. Patrick’s Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
@@ -1738,8 +1755,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @northwest_territories = [
+      def northwest_territories
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 23), "Victoria Day / Fête de la Reine ou Journée nationale des Patriotes", "Victoria Day"),
@@ -2041,8 +2060,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 11), "Remembrance Day / Jour du Souvenir", "Remembrance Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day")
         ]
+      end
 
-        @nova_scotia = [
+      def nova_scotia
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 4, 24), "Easter Sunday / Le dimanche de Pâques", "Easter Sunday"),
@@ -2340,8 +2361,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @nunavut = [
+      def nunavut
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 23), "Victoria Day / Fête de la Reine ou Journée nationale des Patriotes", "Victoria Day"),
@@ -2643,8 +2666,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 11), "Remembrance Day / Jour du Souvenir", "Remembrance Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day")
         ]
+      end
 
-        @ontario = [
+      def ontario
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Family Day / Fête de la famille", "Family Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
@@ -3006,8 +3031,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @prince_edward_island = [
+      def prince_edward_island
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Islander Day / Fête des Insulaires", "Islander Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
@@ -3339,8 +3366,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "Boxing Day / Lendemain de Noël", "Boxing Day")
         ]
+      end
 
-        @quebec = [
+      def quebec
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 2), "Vacances nouvel an", "New Year’s Holiday"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Vendredi saint", "Good Friday"),
@@ -3642,8 +3671,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 10, 8), "Action de grâce", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Noël", "Christmas Day")
         ]
+      end
 
-        @saskatchewan = [
+      def saskatchewan
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Family Day / Fête de la famille", "Family Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
@@ -3945,8 +3976,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 11), "Remembrance Day / Jour du Souvenir", "Remembrance Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day")
         ]
+      end
 
-        @yukon = [
+      def yukon
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day / Jour de l'An", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday / Vendredi saint", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 23), "Victoria Day / Fête de la Reine ou Journée nationale des Patriotes", "Victoria Day"),
@@ -4219,6 +4252,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day / Noël", "Christmas Day")
         ]
       end
+
     end
   end
 end

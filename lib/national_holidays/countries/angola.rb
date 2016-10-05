@@ -1,17 +1,17 @@
 module NationalHolidays
   module Countries
-    class Angola < CountryNationalHolidays
-
-      attr_reader :luanda
+    class Angola < Country
 
       def default
-        self.luanda
+        self.regions.first
       end
 
       def initialize
-        @regions = [ 'Luanda' ]
+        @regions = [ Region.new('Angola (all)', 'angola01', self.luanda) ]
+      end
 
-        @luanda = [
+      def luanda
+        [
           NationalHoliday.new(Date.new(2014, 1, 1), "Ano Novo", "New Year's Day"),
           NationalHoliday.new(Date.new(2014, 1, 25), "Dia da Cidade de Luanda", "Luanda's Day"),
           NationalHoliday.new(Date.new(2014, 2, 4), "Dia Nacional do Esforço Armado", "Day of the Armed Struggle"),
@@ -338,6 +338,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Natal", "Christmas Day")
         ]
       end
+
     end
   end
 end

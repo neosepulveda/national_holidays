@@ -1,5 +1,5 @@
 require "national_holidays/version"
-require 'national_holidays/country_national_holidays'
+require 'national_holidays/country'
 require 'national_holidays/countries'
 
 module NationalHolidays
@@ -22,7 +22,7 @@ module NationalHolidays
   end
 
   def self.country_of_region(region)
-    Countries.to_human_format(Countries.reverse_search(Countries.to_human_format(region)))
+    Countries.country(Countries.reverse_search(region))
   end
 
   def self.country(country)
@@ -40,7 +40,7 @@ module NationalHolidays
   private
 
   def self.verbose(country)
-    { country: Countries.to_human_format(country), regions: Countries.country(country).regions }
+    { country: Countries.to_human_format(country), regions: { region_name: Countries.country(country).regions_name, region_code: Countries.country(country).regions_code } }
   end
 
   def self.table(country)
@@ -48,7 +48,7 @@ module NationalHolidays
   end
 
   def self.table_row(country, region)
-    { country: Countries.to_human_format(country), region: region }
+    { country: Countries.to_human_format(country), region_name: region.region_name, region_code: region.region_code }
   end
 
 end

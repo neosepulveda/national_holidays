@@ -1,27 +1,74 @@
 module NationalHolidays
   module Countries
-    class UnitedStates < CountryNationalHolidays
-
-      attr_reader :alabama, :alaska, :arizona, :arkansas, :california, :colorado, :connecticut, :delaware, :district_of_columbia, :florida,
-                  :georgia, :hawaii, :idaho, :illinois, :indiana, :iowa, :kansas, :kentucky, :louisiana, :maine, :maryland, :massachusetts, :michigan,
-                  :minnesota, :mississippi, :missouri, :montana, :nebraska, :nevada, :new_hampshire, :new_jersey, :new_mexico, :new_york, :north_carolina,
-                  :north_dakota, :ohio, :oklahoma, :oregon, :pennsylvania, :rhode_island, :south_carolina, :south_dakota, :tennessee, :texas, :utah,
-                  :vermont, :virginia, :washington, :west_virginia, :wisconsin, :wyoming
+    class UnitedStates < Country
 
       def default
-        self.california
+        self.regions[4]
       end
 
       def initialize
-        @regions = [ "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
-          "Delaware", "District Of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
-          "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
-          "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico",
-          "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island",
-          "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia",
-          "Washington", "West Virginia", "Wisconsin", "Wyoming" ]
+        @regions = [
+          Region.new('Alabama', 'united_states01', self.alabama),
+          Region.new('Alaska', 'united_states02', self.alaska),
+          Region.new('Arizona', 'united_states03', self.arizona),
+          Region.new('Arkansas', 'united_states04', self.arkansas),
+          Region.new('California', 'united_states05', self.california),
+          Region.new('Colorado', 'united_states06', self.colorado),
+          Region.new('Connecticut', 'united_states07', self.connecticut),
+          Region.new('Delaware', 'united_states08', self.delaware),
+          Region.new('District Of Columbia', 'united_states09', self.district_of_columbia),
 
-        @alabama = [
+          Region.new('Florida', 'united_states10', self.florida),
+          Region.new('Georgia', 'united_states11', self.georgia),
+          Region.new('Hawaii', 'united_states12', self.hawaii),
+          Region.new('Idaho', 'united_states13', self.idaho),
+          Region.new('Illinois', 'united_states14', self.illinois),
+          Region.new('Indiana', 'united_states15', self.indiana),
+          Region.new('Iowa', 'united_states16', self.iowa),
+          Region.new('Kansas', 'united_states17', self.kansas),
+          Region.new('Kentucky', 'united_states18', self.kentucky),
+          Region.new('Louisiana', 'united_states19', self.louisiana),
+
+          Region.new('Maine', 'united_states20', self.maine),
+          Region.new('Maryland', 'united_states21', self.maryland),
+          Region.new('Massachusetts', 'united_states22', self.massachusetts),
+          Region.new('Michigan', 'united_states23', self.michigan),
+          Region.new('Minnesota', 'united_states24', self.minnesota),
+          Region.new('Mississippi', 'united_states25', self.mississippi),
+          Region.new('Missouri', 'united_states26', self.missouri),
+          Region.new('Montana', 'united_states27', self.montana),
+          Region.new('Nebraska', 'united_states28', self.nebraska),
+          Region.new('Nevada', 'united_states29', self.nevada),
+
+          Region.new('New Hampshire', 'united_states30', self.new_hampshire),
+          Region.new('New Jersey', 'united_states31', self.new_jersey),
+          Region.new('New Mexico', 'united_states32', self.new_mexico),
+          Region.new('New York', 'united_states33', self.new_york),
+          Region.new('North Carolina', 'united_states34', self.north_carolina),
+          Region.new('North Dakota', 'united_states35', self.north_dakota),
+          Region.new('Ohio', 'united_states36', self.ohio),
+          Region.new('Oklahoma', 'united_states37', self.oklahoma),
+          Region.new('Oregon', 'united_states38', self.oregon),
+          Region.new('Pennsylvania', 'united_states39', self.pennsylvania),
+
+          Region.new('Rhode Island', 'united_states40', self.rhode_island),
+          Region.new('South Carolina', 'united_states41', self.south_carolina),
+          Region.new('South Dakota', 'united_states42', self.south_dakota),
+          Region.new('Tennessee', 'united_states43', self.tennessee),
+          Region.new('Texas', 'united_states44', self.texas),
+          Region.new('Utah', 'united_states45', self.utah),
+          Region.new('Vermont', 'united_states46', self.vermont),
+          Region.new('Virginia', 'united_states47', self.virginia),
+          Region.new('Washington', 'united_states48', self.washington),
+          Region.new('West Virginia', 'united_states49', self.west_virginia),
+
+          Region.new('Wisconsin', 'united_states50', self.wisconsin),
+          Region.new('Wyoming', 'united_states51', self.wyoming)
+         ]
+      end
+
+      def alabama
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Robert E. Lee, Martin Luther King, Jr.'s Birthday", "Robert E. Lee, Martin Luther King, Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "George Washington, Thomas Jefferson's Birthday", "George Washington, Thomas Jefferson's Birthday"),
           NationalHoliday.new(Date.new(2011, 3, 8), "Mardi Gras", "Mardi Gras"),
@@ -412,8 +459,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving", "Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @alaska = [
+      def alaska
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 3, 28), "Seward's Day", "Seward's Day"),
@@ -744,8 +793,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @arizona = [
+      def arizona
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr. / Civil Rights Day", "Dr. Martin Luther King, Jr. / Civil Rights Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Lincoln / Washington / Presidents' Day", "Lincoln / Washington / Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -1046,8 +1097,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @arkansas = [
+      def arkansas
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King Jr. and Robert E. Lee’s Birthdays", "Dr. Martin Luther King Jr. and Robert E. Lee’s Birthdays"),
           NationalHoliday.new(Date.new(2011, 2, 21), "George Washington’s Birthday and Daisy Gatson Bates Day", "George Washington’s Birthday and Daisy Gatson Bates Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -1348,8 +1401,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 24), "Christmas Eve", "Christmas Eve"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @california = [
+      def california
+         [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
@@ -1681,8 +1736,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day after Thanksgiving", "Day after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @colorado = [
+      def colorado
+         [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.'s Birthday", "Martin Luther King, Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington-Lincoln Day", "Washington-Lincoln Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -1983,8 +2040,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @connecticut = [
+      def connecticut
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King's Day", "Martin Luther King's Day"),
           NationalHoliday.new(Date.new(2011, 2, 11), "Lincoln's Birthday", "Lincoln's Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday", "Washington's Birthday"),
@@ -2345,8 +2404,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @delaware = [
+      def delaware
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday ", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -2677,8 +2738,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day after Thanksgiving", "Day after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @district_of_columbia = [
+      def district_of_columbia
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday", "Washington's Birthday"),
           NationalHoliday.new(Date.new(2011, 4, 15), "DC Emancipation Day", "DC Emancipation Day"),
@@ -3010,8 +3073,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @florida = [
+      def florida
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Birthday of Dr. Martin Luther King, Jr.", "Birthday of Dr. Martin Luther King, Jr."),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
           NationalHoliday.new(Date.new(2011, 7, 4), "Independence Day", "Independence Day"),
@@ -3282,8 +3347,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Friday after Thanksgiving", "Friday after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @georgia = [
+      def georgia
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.'s Birthday", "Martin Luther King, Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 4, 25), "Confederate Memorial Day", "Confederate Memorial Day"),
@@ -3645,8 +3712,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Robert E. Lee's Birthday", "Robert E. Lee's Birthday"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @hawaii = [
+      def hawaii
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr. Day", "Dr. Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 3, 25), "Prince Jonah Kuhio Kalanianaole Day", "Prince Jonah Kuhio Kalanianaole Day"),
@@ -4052,8 +4121,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @idaho = [
+      def idaho
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -4354,8 +4425,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @illinois = [
+      def illinois
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Day", "Martin Luther King Day"),
           NationalHoliday.new(Date.new(2011, 2, 11), "Lincoln's Birthday", "Lincoln's Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday (President's Day)", "Washington's Birthday (President's Day)"),
@@ -4731,8 +4804,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @indiana = [
+      def indiana
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 3), "Primary Election Day", "Primary Election Day"),
@@ -5151,8 +5226,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 24), "Washington's Birthday", "Washington's Birthday"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @iowa = [
+      def iowa
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr.’s Birthday", "Dr. Martin Luther King, Jr.’s Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 11), "Lincoln’s Birthday", "Lincoln’s Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday", "Washington's Birthday"),
@@ -5483,8 +5560,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day after Thanksgiving", "Day after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @kansas = [
+      def kansas
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
           NationalHoliday.new(Date.new(2011, 7, 4), "Independence Day", "Independence Day"),
@@ -5759,8 +5838,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @kentucky = [
+      def kentucky
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.'s Birthday", "Martin Luther King, Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -6129,8 +6210,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas", "Christmas"),
           NationalHoliday.new(Date.new(2040, 12, 31), "New Year's", "New Year's")
         ]
+      end
 
-        @louisiana = [
+      def louisiana
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.'s Birthday", "Martin Luther King, Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 3, 8), "Mardi Gras", "Mardi Gras"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
@@ -6454,8 +6537,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @maine = [
+      def maine
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday/President's Day", "Washington's Birthday/President's Day"),
           NationalHoliday.new(Date.new(2011, 4, 18), "Patriots Day", "Patriots Day"),
@@ -6816,8 +6901,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Thanksgiving Friday", "Thanksgiving Friday"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @maryland = [
+      def maryland
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr., Birthday", "Dr. Martin Luther King, Jr., Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -7156,8 +7243,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "American Indian Heritage Day", "American Indian Heritage Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @massachusetts = [
+      def massachusetts
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Birthday", "Martin Luther King Jr. Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington’s Birthday", "Washington’s Birthday"),
@@ -7489,8 +7578,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @michigan = [
+      def michigan
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents Day", "Presidents Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -7866,8 +7957,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 31), "New Year's Eve", "New Year's Eve")
         ]
+      end
 
-        @minnesota = [
+      def minnesota
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -8198,8 +8291,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day after Thanksgiving", "Day after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @mississippi = [
+      def mississippi
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King's and Robert E. Lee's Birthdays", "Martin Luther King's and Robert E. Lee's Birthdays"),
           NationalHoliday.new(Date.new(2011, 2, 21), "George Washington's Birthday", "George Washington's Birthday"),
@@ -8501,8 +8596,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @missouri = [
+      def missouri
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 11), "Lincoln Day", "Lincoln Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday", "Washington's Birthday"),
@@ -8863,8 +8960,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @montana = [
+      def montana
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -9180,8 +9279,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @nebraska = [
+      def nebraska
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 4, 29), "Arbor Day", "Arbor Day"),
@@ -9543,8 +9644,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day after Thanksgiving", "Day after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @nevada = [
+      def nevada
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.'s Birthday", "Martin Luther King, Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday", "Washington's Birthday"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -9875,8 +9978,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Family Day", "Family Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @new_hampshire = [
+      def new_hampshire
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. /Civil Rights Day", "Martin Luther King Jr. /Civil Rights Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President’s Day", "President’s Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -10222,8 +10327,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day after Thanksgiving", "Day after Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @new_jersey = [
+      def new_jersey
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents Day", "Presidents Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
@@ -10584,8 +10691,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @new_mexico = [
+      def new_mexico
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Birthday", "Martin Luther King, Jr. Birthday"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
           NationalHoliday.new(Date.new(2011, 7, 4), "Independence Day", "Independence Day"),
@@ -10886,8 +10995,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @new_york = [
+      def new_york
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr. Day", "Dr. Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 12), "Lincoln's Birthday", "Lincoln's Birthday"),
@@ -11249,8 +11360,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @north_carolina = [
+      def north_carolina
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr. Day", "Dr. Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -11585,8 +11698,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 24), "Christmas", "Christmas"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas", "Christmas")
         ]
+      end
 
-        @north_dakota = [
+      def north_dakota
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
@@ -11887,8 +12002,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @ohio = [
+      def ohio
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Day", "Martin Luther King Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -12189,8 +12306,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving", "Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas", "Christmas")
         ]
+      end
 
-        @oklahoma = [
+      def oklahoma
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -12521,8 +12640,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 24), "Christmas", "Christmas"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas", "Christmas")
         ]
+      end
 
-        @oregon = [
+      def oregon
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.’s Birthday", "Martin Luther King, Jr.’s Birthday"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents Day", "Presidents Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -12793,8 +12914,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @pennsylvania = [
+      def pennsylvania
+        [
           NationalHoliday.new(Date.new(2011, 1, 3), "New Year’s Day", "New Year’s Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr. Day", "Dr. Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 12), "Lincoln’s Birthday", "Lincoln’s Birthday"),
@@ -13220,8 +13343,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @rhode_island = [
+      def rhode_island
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
           NationalHoliday.new(Date.new(2011, 7, 4), "Independence Day", "Independence Day"),
@@ -13493,8 +13618,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @south_carolina = [
+      def south_carolina
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr.'s Day", "Martin Luther King, Jr.'s Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington's Birthday/Presidents' Day", "Washington's Birthday/Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 10), "Confederate Memorial Day", "Confederate Memorial Day"),
@@ -13885,8 +14012,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "The Day after Christmas", "The Day after Christmas")
         ]
+      end
 
-        @south_dakota = [
+      def south_dakota
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -14187,8 +14316,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving", "Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas", "Christmas")
         ]
+      end
 
-        @tennessee = [
+      def tennessee
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Day", "Martin Luther King Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 4, 22), "Good Friday", "Good Friday"),
@@ -14520,8 +14651,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "The Friday after Thanksgiving Day", "The Friday after Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @texas = [
+      def texas
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr. Day", "Martin Luther King Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
@@ -14883,8 +15016,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 26), "The Day after Christmas", "The Day after Christmas")
         ]
+      end
 
-        @utah = [
+      def utah
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Dr. Martin Luther King, Jr. Day", "Dr. Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Washington and Lincoln Day", "Washington and Lincoln Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -15215,8 +15350,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas", "Christmas")
         ]
+      end
 
-        @vermont = [
+      def vermont
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Day", "Martin Luther King Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 3, 1), "Town Meeting Day", "Town Meeting Day"),
@@ -15549,8 +15686,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 22), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @virginia = [
+      def virginia
+        [
           NationalHoliday.new(Date.new(2011, 1, 14), "Lee-Jackson Day", "Lee-Jackson Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "George Washington Day", "George Washington Day"),
@@ -15913,8 +16052,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day After Thanksgiving", "Day After Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @washington = [
+      def washington
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King, Jr. Day", "Martin Luther King, Jr. Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "Presidents' Day", "Presidents' Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -16215,8 +16356,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 11, 23), "Day After Thanksgiving", "Day After Thanksgiving"),
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
+      end
 
-        @west_virginia = [
+      def west_virginia
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr.Day", "Martin Luther King Jr.Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -16664,8 +16807,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 31), "New Year's Eve", "New Year's Eve")
         ]
+      end
 
-        @wisconsin = [
+      def wisconsin
+        [
           NationalHoliday.new(Date.new(2011, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr.'s Birthday", "Martin Luther King Jr.'s Birthday"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -16937,8 +17082,10 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2040, 12, 31), "New Year's Eve Day", "New Year's Eve Day")
         ]
+      end
 
-        @wyoming = [
+      def wyoming
+        [
           NationalHoliday.new(Date.new(2011, 1, 17), "Martin Luther King Jr./WY Equality Day", "Martin Luther King Jr./WY Equality Day"),
           NationalHoliday.new(Date.new(2011, 2, 21), "President's Day", "President's Day"),
           NationalHoliday.new(Date.new(2011, 5, 30), "Memorial Day", "Memorial Day"),
@@ -17210,6 +17357,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
       end
+      
     end
   end
 end
