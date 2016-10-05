@@ -18,6 +18,7 @@ require 'national_holidays/countries/brazil'
 require 'national_holidays/countries/china'
 require 'national_holidays/countries/colombia'
 require 'national_holidays/countries/croatia'
+require 'national_holidays/countries/czech_republic'
 
 module NationalHolidays
   module Countries
@@ -35,7 +36,10 @@ module NationalHolidays
     end
 
     def self.countries
-      [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china", "colombia", "croatia", "ethiopia", "france", "germany", "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom", "united_states" ]
+      [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china",
+        "colombia", "croatia", "czech_republic", "ethiopia", "france", "germany",
+        "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom",
+        "united_states" ]
     end
 
     def self.country(country)
