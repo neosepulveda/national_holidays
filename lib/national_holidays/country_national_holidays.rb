@@ -1,8 +1,10 @@
-require 'date'
 require 'national_holidays/national_holiday'
+require 'national_holidays/region'
 
 module NationalHolidays
   class CountryNationalHolidays
+
+    attr_reader :regions
 
     def region(region = 'Default')
       self.regions.include?(region) ? self.send(region.to_s.downcase.tr(" ", "_")) : nil
@@ -18,10 +20,6 @@ module NationalHolidays
 
     def is_national_holiday?(date = Date.today, region = 'Default')
       self.region(region).select { |ph| ph.is_national_holiday?(date) }.any?
-    end
-
-    def regions
-      @regions
     end
 
     def number_of_regions
