@@ -36,10 +36,11 @@ module NationalHolidays
     end
 
     def self.countries
-      [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china",
-        "colombia", "croatia", "czech_republic", "ethiopia", "france", "germany",
-        "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom",
-        "united_states" ]
+      # [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china",
+      #   "colombia", "croatia", "czech_republic", "ethiopia", "france", "germany",
+      #   "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom",
+      #   "united_states" ]
+      [ 'italy' ]
     end
 
     def self.country(country)
@@ -58,7 +59,10 @@ module NationalHolidays
     end
 
     def self.countries_and_regions
-      self.countries.map { |country| [ country, eval(self.to_class_format(country)).new.regions ] }.to_h
+      self.countries.map do |country|
+        c = self.country(country)
+        { country: country, regions: { region_name: c.regions_name, region_code: c.regions_code } }
+      end
     end
 
     def self.to_class_format(str)

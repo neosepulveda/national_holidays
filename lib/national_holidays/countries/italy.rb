@@ -10,9 +10,6 @@ module NationalHolidays
         @regions = [ Region.new('Italy (all)', 'italy01', self.lazio) ]
       end
 
-
-      private
-
       def lazio
         [
           NationalHoliday.new(Date.new(2011, 1, 1), "Capodanno", "New Year's Day"),
