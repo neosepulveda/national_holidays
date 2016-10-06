@@ -39,7 +39,7 @@ module NationalHolidays
     def self.countries
       [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china",
         "colombia", "croatia", "czech_republic", "denmark", "estonia", "ethiopia", "finland" "france", "germany",
-        "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom",
+        "hong_kong", "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom",
         "united_states"
       ]
     end
