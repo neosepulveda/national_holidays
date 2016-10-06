@@ -63,9 +63,9 @@ module NationalHolidays
         "colombia", "croatia", "czech_republic", "denmark", "estonia", "ethiopia",
         "finland", "france", "germany", "hong_kong", "hungary", "india", "ireland",
         "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg",
-        "mexico", "new_zealand", "norway", "poland", "portugal", "romania", "russia", "serbia",
-        "slovakia", "slovenia", "south_africa", "south_korea", "sweden", "ukraine", "united_kingdom", "netherlands",
-        "united_states"
+        "mexico", "new_zealand", "norway", "poland", "portugal", "romania",
+        "russia", "serbia", "slovakia", "slovenia", "south_africa", "south_korea",
+        "sweden", "ukraine", "united_kingdom", "netherlands", "united_states"
       ]
     end
 
