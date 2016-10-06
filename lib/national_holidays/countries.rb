@@ -39,6 +39,10 @@ require 'national_holidays/countries/serbia'
 require 'national_holidays/countries/slovakia'
 require 'national_holidays/countries/slovenia'
 require 'national_holidays/countries/south_africa'
+require 'national_holidays/countries/south_korea'
+require 'national_holidays/countries/sweden'
+require 'national_holidays/countries/ukraine'
+
 
 module NationalHolidays
   module Countries
@@ -59,7 +63,7 @@ module NationalHolidays
         "finland", "france", "germany", "hong_kong", "hungary", "india", "ireland",
         "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg",
         "mexico", "norway", "poland", "portugal", "romania", "russia", "serbia",
-        "slovakia", "slovenia", "south_africa", "united_kingdom", "netherlands",
+        "slovakia", "slovenia", "south_africa", "south_korea", "sweden", "ukraine", "united_kingdom", "netherlands",
         "united_states"
       ]
     end
