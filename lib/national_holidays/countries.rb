@@ -22,6 +22,28 @@ require 'national_holidays/countries/czech_republic'
 require 'national_holidays/countries/denmark'
 require 'national_holidays/countries/finland'
 require 'national_holidays/countries/estonia'
+require 'national_holidays/countries/hong_kong'
+require 'national_holidays/countries/hungary'
+require 'national_holidays/countries/iceland'
+require 'national_holidays/countries/israel'
+require 'national_holidays/countries/japan'
+require 'national_holidays/countries/latvia'
+require 'national_holidays/countries/lithuania'
+require 'national_holidays/countries/luxembourg'
+require 'national_holidays/countries/mexico'
+require 'national_holidays/countries/netherlands'
+require 'national_holidays/countries/poland'
+require 'national_holidays/countries/romania'
+require 'national_holidays/countries/russia'
+require 'national_holidays/countries/serbia'
+require 'national_holidays/countries/slovakia'
+require 'national_holidays/countries/slovenia'
+require 'national_holidays/countries/south_africa'
+require 'national_holidays/countries/south_korea'
+require 'national_holidays/countries/sweden'
+require 'national_holidays/countries/ukraine'
+require 'national_holidays/countries/new_zealand'
+
 
 module NationalHolidays
   module Countries
@@ -38,9 +60,12 @@ module NationalHolidays
 
     def self.countries
       [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china",
-        "colombia", "croatia", "czech_republic", "denmark", "estonia", "ethiopia", "finland", "france", "germany",
-        "hong_kong", "india", "ireland", "italy", "kenya", "norway", "portugal", "united_kingdom",
-        "united_states"
+        "colombia", "croatia", "czech_republic", "denmark", "estonia", "ethiopia",
+        "finland", "france", "germany", "hong_kong", "hungary", "india", "ireland",
+        "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg",
+        "mexico", "new_zealand", "norway", "poland", "portugal", "romania",
+        "russia", "serbia", "slovakia", "slovenia", "south_africa", "south_korea",
+        "sweden", "ukraine", "united_kingdom", "netherlands", "united_states"
       ]
     end
 
