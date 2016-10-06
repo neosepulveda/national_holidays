@@ -15,7 +15,7 @@ module NationalHolidays
       args[:region] = self.default.region_code if args[:region].nil?
 
       r = self.region(args[:region])
-      r.region_national_holidays.select { |nh| (nh.start_date.year == args[:year]) || (nh.end_date.year == args[:year]) } unless r.nil?
+      r.regional_national_holidays.select { |nh| (nh.start_date.year == args[:year]) || (nh.end_date.year == args[:year]) } unless r.nil?
     end
 
     def national_holidays_month(args = { year: Date.today.year, month: Date.today.month, region: self.default.region_code })
@@ -31,7 +31,7 @@ module NationalHolidays
       args[:region] = self.default.region_code if args[:region].nil?
 
       r = self.region(args[:region])
-      r.region_national_holidays.select { |nh| nh.is_national_holiday?(args[:date]) }.any? unless r.nil?
+      r.regional_national_holidays.select { |nh| nh.is_national_holiday?(args[:date]) }.any? unless r.nil?
     end
 
     def number_of_regions
