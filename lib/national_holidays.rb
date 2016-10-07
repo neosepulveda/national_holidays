@@ -3,52 +3,61 @@ require 'national_holidays/country'
 require 'national_holidays/countries'
 
 module NationalHolidays
+  class Main
 
-  def self.available_countries(args = { format: :verbose })
-    case args[:format]
-    when :verbose
-      Countries.countries.map { |country| self.verbose(country) }
-    when :table
-      table = Array.new
-      Countries.countries.each { |country| table.concat(self.table(country)) }
-      table
-    else
-      Countries.countries.map { |country| self.verbose(country) }
+    attr_reader :countries
+
+    def initialize
+      @countries = Countries
     end
-  end
 
-  def self.regions_of_country(country)
-    Countries.country(country).regions
-  end
+    def available_countries(args = { format: :verbose })
+      case args[:format]
+      when :verbose
+        @countries.countries.map { |country| verbose(country) }
+      when :table
+        table = Array.new
+        @countries.countries.each { |country| table.concat(table(country)) }
+        table
+      else
+        @countries.countries.map { |country| verbose(country) }
+      end
+    end
 
-  def self.country_of_region(region)
-    Countries.country(Countries.reverse_search(region))
-  end
+    def search(str)
+      @countries.holidays_country_or_region(str)
+    end
 
-  def self.country(country)
-    Countries.country(country)
-  end
+    def regions_of_country(country)
+      @countries.country(country).regions
+    end
 
-  def self.region(region)
-    Countries.region(region)
-  end
+    def country_of_region(region)
+      @countries.country(@countries.reverse_search(region))
+    end
 
-  def self.search(str)
-    Countries.holidays_country_or_region(str)
-  end
+    def country(country)
+      @countries.country(country)
+    end
 
-  private
+    def region(region)
+      @countries.region(region)
+    end
 
-  def self.verbose(country)
-    { country: Countries.to_human_format(country), regions: { region_name: Countries.country(country).regions_name, region_code: Countries.country(country).regions_code } }
-  end
+    private
 
-  def self.table(country)
-    Countries.country(country).regions.map { |region| self.table_row(country, region) }
-  end
+    def verbose(country)
+      { country: @countries.to_human_format(country), regions: { region_name: @countries.country(country).regions_name, region_code: @countries.country(country).regions_code } }
+    end
 
-  def self.table_row(country, region)
-    { country: Countries.to_human_format(country), region_name: region.region_name, region_code: region.region_code }
+    def table(country)
+      @countries.country(country).regions.map { |region| table_row(country, region) }
+    end
+
+    def table_row(country, region)
+      { country: @countries.to_human_format(country), region_name: region.region_name, region_code: region.region_code }
+    end
+
   end
 
 end
