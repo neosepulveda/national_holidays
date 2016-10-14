@@ -75,7 +75,8 @@ module NationalHolidays
     end
 
     def self.region(region)
-      country = self.reverse_search(region)
+      #country = self.reverse_search(region)
+      country = region.gsub(/[^a-zA-Z_ ]/,'') #removes last digits
 
       self.country(country).region(region) unless country.nil?
     end
