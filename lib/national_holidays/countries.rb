@@ -43,6 +43,7 @@ require 'national_holidays/countries/south_korea'
 require 'national_holidays/countries/sweden'
 require 'national_holidays/countries/ukraine'
 require 'national_holidays/countries/new_zealand'
+require 'national_holidays/countries/spain'
 
 
 module NationalHolidays
@@ -65,7 +66,7 @@ module NationalHolidays
         "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg",
         "mexico", "new_zealand", "norway", "poland", "portugal", "romania",
         "russia", "serbia", "slovakia", "slovenia", "south_africa", "south_korea",
-        "sweden", "ukraine", "united_kingdom", "netherlands", "united_states"
+        "spain", "sweden", "ukraine", "united_kingdom", "netherlands", "united_states"
       ]
     end
 
