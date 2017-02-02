@@ -59,5 +59,4 @@ module NationalHolidays
     end
 
   end
-
 end
