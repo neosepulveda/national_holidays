@@ -10,7 +10,7 @@ module NationalHolidays
         @regions = [
           Region.new('Comunidad de Madrid', 'spain01', self.comunidad_de_madrid),
           Region.new('Catalunya', 'spain02', self.catalunya),
-          #Region.new('Andalucía', 'spain03', self.andalucia),
+          Region.new('Andalucía', 'spain03', self.andalucia),
           Region.new('Comunidad Valenciana', 'spain04', self.comunidad_valenciana),
 
           #Region.new('Aragón', 'spain05', self.aragon),
