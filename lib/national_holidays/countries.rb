@@ -44,6 +44,18 @@ require 'national_holidays/countries/sweden'
 require 'national_holidays/countries/ukraine'
 require 'national_holidays/countries/new_zealand'
 require 'national_holidays/countries/spain'
+require 'national_holidays/countries/argentina'
+require 'national_holidays/countries/bahrain'
+require 'national_holidays/countries/dubai'
+require 'national_holidays/countries/haiti'
+require 'national_holidays/countries/iran'
+require 'national_holidays/countries/malaysia'
+require 'national_holidays/countries/malta'
+require 'national_holidays/countries/monaco'
+require 'national_holidays/countries/saudi_arabia'
+require 'national_holidays/countries/singapore'
+require 'national_holidays/countries/thailand'
+require 'national_holidays/countries/united_arab_emirates'
 
 
 module NationalHolidays
@@ -60,13 +72,13 @@ module NationalHolidays
     end
 
     def self.countries
-      [ "angola", "australia", "austria", "belgium", "brazil", "canada", "china",
-        "colombia", "croatia", "czech_republic", "denmark", "estonia", "ethiopia",
-        "finland", "france", "germany", "hong_kong", "hungary", "india", "ireland",
-        "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg",
-        "mexico", "new_zealand", "norway", "poland", "portugal", "romania",
-        "russia", "serbia", "slovakia", "slovenia", "south_africa", "south_korea",
-        "spain", "sweden", "ukraine", "united_kingdom", "netherlands", "united_states"
+      [ "angola", "argentina", "australia", "austria", "bahrain", "belgium", "brazil", "canada", "china",
+        "colombia", "croatia", "czech_republic", "denmark", "dubai", "estonia", "ethiopia",
+        "finland", "france", "germany", "haiti", "hong_kong", "hungary", "iceland", "india", "iran", "ireland",
+        "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
+        "mexico", "monaco", "netherlands", "new_zealand", "norway", "poland", "portugal", "romania",
+        "russia", "saudi_arabia", "serbia", "singapore", "slovakia", "slovenia", "south_africa", "south_korea",
+        "spain", "sweden", "thailand", "ukraine", "united_arab_emirates", "united_kingdom", "united_states"
       ]
     end
 
