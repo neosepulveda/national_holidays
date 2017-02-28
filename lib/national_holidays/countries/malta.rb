@@ -5,7 +5,7 @@ module NationalHolidays
       attr_reader :regions
 
       def initialize
-        @regions = [ Region.new('Malta (all)', 'malta01', malta ]
+        @regions = [ Region.new('Malta (all)', 'malta01', malta) ]
       end
 
       def default
