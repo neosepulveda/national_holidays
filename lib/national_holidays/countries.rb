@@ -56,6 +56,7 @@ require 'national_holidays/countries/saudi_arabia'
 require 'national_holidays/countries/singapore'
 require 'national_holidays/countries/thailand'
 require 'national_holidays/countries/united_arab_emirates'
+require 'national_holidays/countries/pakistan'
 
 
 module NationalHolidays
@@ -76,7 +77,7 @@ module NationalHolidays
         "colombia", "croatia", "czech_republic", "denmark", "dubai", "estonia", "ethiopia",
         "finland", "france", "germany", "haiti", "hong_kong", "hungary", "iceland", "india", "iran", "ireland",
         "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
-        "mexico", "monaco", "netherlands", "new_zealand", "norway", "poland", "portugal", "romania",
+        "mexico", "monaco", "netherlands", "new_zealand", "norway", "pakistan", "poland", "portugal", "romania",
         "russia", "saudi_arabia", "serbia", "singapore", "slovakia", "slovenia", "south_africa", "south_korea",
         "spain", "sweden", "thailand", "ukraine", "united_arab_emirates", "united_kingdom", "united_states"
       ]
