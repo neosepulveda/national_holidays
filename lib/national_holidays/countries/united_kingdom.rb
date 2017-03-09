@@ -774,6 +774,7 @@ module NationalHolidays
 
           NationalHoliday.new(Date.new(2017, 1, 2), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2017, 3, 17), "St. Patrick's Day", "St. Patrick's Day"),
+          NationalHoliday.new(Date.new(2017, 4, 14), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2017, 4, 17), "Easter Monday", "Easter Monday"),
           NationalHoliday.new(Date.new(2017, 5, 1), "May Day Bank Holiday", "May Day Bank Holiday"),
           NationalHoliday.new(Date.new(2017, 5, 29), "Spring Bank Holiday", "Spring Bank Holiday"),
@@ -784,6 +785,7 @@ module NationalHolidays
 
           NationalHoliday.new(Date.new(2018, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2018, 3, 19), "St. Patrick's Day", "St. Patrick's Day"),
+          NationalHoliday.new(Date.new(2018, 3, 30), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2018, 4, 2), "Easter Monday", "Easter Monday"),
           NationalHoliday.new(Date.new(2018, 5, 7), "May Day Bank Holiday", "May Day Bank Holiday"),
           NationalHoliday.new(Date.new(2018, 5, 28), "Spring Bank Holiday", "Spring Bank Holiday"),
@@ -794,6 +796,7 @@ module NationalHolidays
 
           NationalHoliday.new(Date.new(2019, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2019, 3, 18), "St. Patrick's Day", "St. Patrick's Day"),
+          NationalHoliday.new(Date.new(2019, 4, 19), "Good Friday", "Good Friday"),
           NationalHoliday.new(Date.new(2019, 4, 22), "Easter Monday", "Easter Monday"),
           NationalHoliday.new(Date.new(2019, 5, 6), "May Day Bank Holiday", "May Day Bank Holiday"),
           NationalHoliday.new(Date.new(2019, 5, 27), "Spring Bank Holiday", "Spring Bank Holiday"),
