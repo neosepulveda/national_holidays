@@ -305,7 +305,8 @@ module NationalHolidays
       # Reference: http://www.calendarioslaborales.com/calendario-laboral-sevilla-2017.htm
       def sevilla
         result = andalucia.reject do |hol|
-          hol.start_date == Date.new(2017, 4, 17)
+          hol.start_date == Date.new(2017, 4, 17) ||
+            hol.start_date == Date.new(2017, 6, 24)
         end
         result << NationalHoliday.new(Date.new(2017, 5, 30), "San Fernando", "St. Ferdinand's Day")
         result << NationalHoliday.new(Date.new(2017, 6, 15), "Corpus Christi", "Corpus Christi")
