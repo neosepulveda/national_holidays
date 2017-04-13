@@ -308,7 +308,7 @@ module NationalHolidays
           hol.start_date == Date.new(2017, 4, 17)
         end
         result << NationalHoliday.new(Date.new(2017, 5, 30), "San Fernando", "St. Ferdinand's Day")
-        result << NationalHoliday.new(Date.new(2017, 6, 17), "Corpus Christi", "Corpus Christi")
+        result << NationalHoliday.new(Date.new(2017, 6, 15), "Corpus Christi", "Corpus Christi")
         result.sort_by {|hol| hol.start_date}
       end
 
