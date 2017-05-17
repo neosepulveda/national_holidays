@@ -8,6 +8,7 @@ require 'national_holidays/countries/ireland'
 require 'national_holidays/countries/austria'
 require 'national_holidays/countries/australia'
 require 'national_holidays/countries/germany'
+require 'national_holidays/countries/greece'
 require 'national_holidays/countries/canada'
 require 'national_holidays/countries/india'
 require 'national_holidays/countries/kenya'
@@ -76,7 +77,7 @@ module NationalHolidays
     def self.countries
       [ "angola", "argentina", "australia", "austria", "bahrain", "belgium", "brazil", "canada", "china",
         "colombia", "croatia", "czech_republic", "denmark", "dubai", "estonia", "ethiopia",
-        "finland", "france", "germany", "haiti", "hong_kong", "hungary", "iceland", "india", "iran", "ireland",
+        "finland", "france", "germany", "greece", "haiti", "hong_kong", "hungary", "iceland", "india", "iran", "ireland",
         "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
         "mexico", "moldova", "monaco", "netherlands", "new_zealand", "norway", "pakistan", "poland", "portugal", "romania",
         "russia", "saudi_arabia", "serbia", "singapore", "slovakia", "slovenia", "south_africa", "south_korea",
