@@ -12,6 +12,7 @@ module NationalHolidays
           Region.new('Catalunya', 'spain02', self.catalunya),
           Region.new('Andalucía', 'spain03', self.andalucia),
           Region.new('Comunidad Valenciana', 'spain04', self.comunidad_valenciana),
+          Region.new('Sevilla', 'spain05', self.sevilla),
 
           #Region.new('Aragón', 'spain05', self.aragon),
           #Region.new('Asturias', 'spain06', self.asturias),
@@ -299,6 +300,17 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2020, 12, 8), "Immaculada Concepción", "Immaculate Conception Day"),
           NationalHoliday.new(Date.new(2020, 12, 25), "Dia de Navidad", "Christmas Day"),
         ]
+      end
+
+      # Reference: http://www.calendarioslaborales.com/calendario-laboral-sevilla-2017.htm
+      def sevilla
+        result = andalucia.reject do |hol|
+          hol.start_date == Date.new(2017, 4, 17) ||
+            hol.start_date == Date.new(2017, 6, 24)
+        end
+        result << NationalHoliday.new(Date.new(2017, 5, 30), "San Fernando", "St. Ferdinand's Day")
+        result << NationalHoliday.new(Date.new(2017, 6, 15), "Corpus Christi", "Corpus Christi")
+        result.sort_by {|hol| hol.start_date}
       end
 
       def comunidad_valenciana
