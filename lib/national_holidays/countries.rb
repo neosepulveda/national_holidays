@@ -15,6 +15,7 @@ require 'national_holidays/countries/ethiopia'
 require 'national_holidays/countries/angola'
 require 'national_holidays/countries/belgium'
 require 'national_holidays/countries/brazil'
+require 'national_holidays/countries/bulgaria'
 require 'national_holidays/countries/china'
 require 'national_holidays/countries/colombia'
 require 'national_holidays/countries/croatia'
@@ -74,7 +75,7 @@ module NationalHolidays
     end
 
     def self.countries
-      [ "angola", "argentina", "australia", "austria", "bahrain", "belgium", "brazil", "canada", "china",
+      [ "angola", "argentina", "australia", "austria", "bahrain", "belgium", "brazil", "bulgaria", "canada", "china",
         "colombia", "croatia", "czech_republic", "denmark", "dubai", "estonia", "ethiopia",
         "finland", "france", "germany", "haiti", "hong_kong", "hungary", "iceland", "india", "iran", "ireland",
         "israel", "italy", "japan", "kenya", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
