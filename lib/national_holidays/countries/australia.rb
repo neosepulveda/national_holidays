@@ -883,7 +883,6 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2017, 4, 17), "Easter Monday", "Easter Monday"),
           NationalHoliday.new(Date.new(2017, 4, 25), "Anzac Day", "Anzac Day"),
           NationalHoliday.new(Date.new(2017, 6, 12), "Queen's Birthday", "Queen's Birthday"),
-          NationalHoliday.new(Date.new(2017, 8, 7), "Bank Holiday", "Bank Holiday"),
           NationalHoliday.new(Date.new(2017, 10, 2), "Labour Day", "Labour Day"),
           NationalHoliday.new(Date.new(2017, 12, 25), "Christmas Day", "Christmas Day"),
           NationalHoliday.new(Date.new(2017, 12, 26), "Boxing Day", "Boxing Day"),
