@@ -30,11 +30,11 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2017, 4, 15), "Fasika", "Easter"),
           NationalHoliday.new(Date.new(2017, 5, 5), "Arbegnoch Qen", "Patriots’ Victory Day"),
           NationalHoliday.new(Date.new(2017, 5, 28), "Derg Downfall Day", "Down fall of the Derg"),
+          NationalHoliday.new(Date.new(2017, 9, 1), "Id Al Adaha", "Id Al Adaha"),
           NationalHoliday.new(Date.new(2017, 9, 11), "Enkutatash", "New Year"),
           NationalHoliday.new(Date.new(2017, 9, 27), "Meskel", "Finding of the True Cross")
         ]
       end
-      
     end
   end
 end
