@@ -11079,7 +11079,6 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2017, 7, 4), "Independence Day", "Independence Day"),
           NationalHoliday.new(Date.new(2017, 9, 4), "Labor Day", "Labor Day"),
           NationalHoliday.new(Date.new(2017, 10, 9), "Columbus Day", "Columbus Day"),
-          NationalHoliday.new(Date.new(2017, 11, 7), "Election Day", "Election Day"),
           NationalHoliday.new(Date.new(2017, 11, 11), "Veterans' Day", "Veterans' Day"),
           NationalHoliday.new(Date.new(2017, 11, 23), "Thanksgiving Day", "Thanksgiving Day"),
           NationalHoliday.new(Date.new(2017, 12, 25), "Christmas Day", "Christmas Day"),
@@ -17357,7 +17356,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 25), "Christmas Day", "Christmas Day")
         ]
       end
-      
+
     end
   end
 end
