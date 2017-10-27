@@ -61,7 +61,13 @@ require 'national_holidays/countries/singapore'
 require 'national_holidays/countries/thailand'
 require 'national_holidays/countries/united_arab_emirates'
 require 'national_holidays/countries/pakistan'
-
+require 'national_holidays/countries/belarus'
+require 'national_holidays/countries/indonesia'
+require 'national_holidays/countries/isle_of_man'
+require 'national_holidays/countries/kuwait'
+require 'national_holidays/countries/myanmar'
+require 'national_holidays/countries/venezuela'
+require 'national_holidays/countries/vietnam'
 
 module NationalHolidays
   module Countries
@@ -77,13 +83,15 @@ module NationalHolidays
     end
 
     def self.countries
-      [ "angola", "argentina", "australia", "austria", "bahrain", "belgium", "brazil", "bulgaria", "canada", "china",
-        "colombia", "croatia", "czech_republic", "denmark", "dubai", "estonia", "ethiopia",
-        "finland", "france", "germany", "greece", "haiti", "hong_kong", "hungary", "iceland", "india", "iran", "ireland",
-        "israel", "italy", "jamaica", "japan", "kenya", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
-        "mexico", "moldova", "monaco", "netherlands", "new_zealand", "norway", "pakistan", "poland", "portugal", "romania",
-        "russia", "saudi_arabia", "serbia", "singapore", "slovakia", "slovenia", "south_africa", "south_korea",
-        "spain", "sweden", "thailand", "ukraine", "united_arab_emirates", "united_kingdom", "united_states"
+      [ "angola", "argentina", "australia", "austria", "bahrain", "belarus", "belgium",
+        "brazil", "bulgaria", "canada", "china", "colombia", "croatia", "czech_republic", "denmark",
+        "dubai", "estonia", "ethiopia", "finland", "france", "germany", "greece", "haiti", "hong_kong",
+        "hungary", "iceland", "india", "indonesia", "iran", "ireland", "isle_of_man", "israel", "italy",
+        "jamaica", "japan", "kenya", "kuwait", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
+        "mexico", "moldova", "monaco", "myanmar", "netherlands", "new_zealand", "norway", "pakistan",
+        "poland", "portugal", "romania", "russia", "saudi_arabia", "serbia", "singapore", "slovakia",
+        "slovenia", "south_africa", "south_korea", "spain", "sweden", "thailand", "ukraine",
+        "united_arab_emirates", "united_kingdom", "united_states", "venezuela", "vietnam"
       ]
     end
 
