@@ -1,3 +1,5 @@
+# https://publicholidays.ro
+
 module NationalHolidays
   module Countries
     class Romania < Country
@@ -44,6 +46,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2017, 4, 16), "Paştele", "Orthodox Easter Sunday"),
           NationalHoliday.new(Date.new(2017, 4, 17), "Doua zi de Pasti", "Orthodox Easter Monday"),
           NationalHoliday.new(Date.new(2017, 5, 1), "Ziua muncii", "Labour Day"),
+          NationalHoliday.new(Date.new(2017, 6, 1), "Children's Day", "Children's Day"),
           NationalHoliday.new(Date.new(2017, 6, 4), "Rusaliile", "Orthodox Whit Sunday"),
           NationalHoliday.new(Date.new(2017, 6, 5), "Doua zi de Rusaliile", "Orthodox Whit Monday"),
           NationalHoliday.new(Date.new(2017, 8, 15), "Adormirea Maicii Domnului/Sfânta Maria Mare", "Dormition of the Theotokos"),
@@ -59,6 +62,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2018, 5, 1), "Ziua muncii", "Labour Day"),
           NationalHoliday.new(Date.new(2018, 5, 27), "Rusaliile", "Orthodox Whit Sunday"),
           NationalHoliday.new(Date.new(2018, 5, 28), "Doua zi de Rusaliile", "Orthodox Whit Monday"),
+          NationalHoliday.new(Date.new(2018, 6, 1), "Children's Day", "Children's Day"),
           NationalHoliday.new(Date.new(2018, 8, 15), "Adormirea Maicii Domnului/Sfânta Maria Mare", "Dormition of the Theotokos"),
           NationalHoliday.new(Date.new(2018, 11, 30), "Sfântul Andrei", "St. Andrew's Day"),
           NationalHoliday.new(Date.new(2018, 12, 1), "Ziua Națională/Marea Unire", "National Day/Great Union"),
@@ -70,6 +74,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2019, 4, 28), "Paştele", "Orthodox Easter Sunday"),
           NationalHoliday.new(Date.new(2019, 4, 29), "Doua zi de Pasti", "Orthodox Easter Monday"),
           NationalHoliday.new(Date.new(2019, 5, 1), "Ziua muncii", "Labour Day"),
+          NationalHoliday.new(Date.new(2019, 6, 1), "Children's Day", "Children's Day"),
           NationalHoliday.new(Date.new(2019, 6, 16), "Rusaliile", "Orthodox Whit Sunday"),
           NationalHoliday.new(Date.new(2019, 6, 17), "Doua zi de Rusaliile", "Orthodox Whit Monday"),
           NationalHoliday.new(Date.new(2019, 8, 15), "Adormirea Maicii Domnului/Sfânta Maria Mare", "Dormition of the Theotokos"),
