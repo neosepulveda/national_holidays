@@ -1,10 +1,9 @@
-require "national_holidays/version"
+require 'national_holidays/version'
 require 'national_holidays/country'
 require 'national_holidays/countries'
 
 module NationalHolidays
   class Main
-
     attr_reader :countries
 
     def initialize
