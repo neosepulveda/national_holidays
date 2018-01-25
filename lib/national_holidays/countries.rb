@@ -68,6 +68,7 @@ require 'national_holidays/countries/kuwait'
 require 'national_holidays/countries/myanmar'
 require 'national_holidays/countries/venezuela'
 require 'national_holidays/countries/vietnam'
+require 'national_holidays/countries/macedonia'
 
 module NationalHolidays
   module Countries
@@ -75,7 +76,7 @@ module NationalHolidays
     def self.holidays_country_or_region(str)
       if str.nil? || str.empty?
         nil
-      elsif self.countries.include?(str.to_s.downcase.tr(" ", "_"))
+      elsif self.countries.include?(str.to_s.downcase.tr(' ', '_'))
         self.country(str).default
       else
         self.region(str)
@@ -83,15 +84,16 @@ module NationalHolidays
     end
 
     def self.countries
-      [ "angola", "argentina", "australia", "austria", "bahrain", "belarus", "belgium",
-        "brazil", "bulgaria", "canada", "china", "colombia", "croatia", "czech_republic", "denmark",
-        "dubai", "estonia", "ethiopia", "finland", "france", "germany", "greece", "haiti", "hong_kong",
-        "hungary", "iceland", "india", "indonesia", "iran", "ireland", "isle_of_man", "israel", "italy",
-        "jamaica", "japan", "kenya", "kuwait", "latvia", "lithuania", "luxembourg", "malaysia", "malta",
-        "mexico", "moldova", "monaco", "myanmar", "netherlands", "new_zealand", "norway", "pakistan",
-        "poland", "portugal", "romania", "russia", "saudi_arabia", "serbia", "singapore", "slovakia",
-        "slovenia", "south_africa", "south_korea", "spain", "sweden", "thailand", "ukraine",
-        "united_arab_emirates", "united_kingdom", "united_states", "venezuela", "vietnam"
+      [
+        'angola', 'argentina', 'australia', 'austria', 'bahrain', 'belarus', 'belgium',
+        'brazil', 'bulgaria', 'canada', 'china', 'colombia', 'croatia', 'czech_republic', 'denmark',
+        'dubai', 'estonia', 'ethiopia', 'finland', 'france', 'germany', 'greece', 'haiti', 'hong_kong',
+        'hungary', 'iceland', 'india', 'indonesia', 'iran', 'ireland', 'isle_of_man', 'israel', 'italy',
+        'jamaica', 'japan', 'kenya', 'kuwait', 'latvia', 'lithuania', 'luxembourg', 'macedonia', 'malaysia', 'malta',
+        'mexico', 'moldova', 'monaco', 'myanmar', 'netherlands', 'new_zealand', 'norway', 'pakistan',
+        'poland', 'portugal', 'romania', 'russia', 'saudi_arabia', 'serbia', 'singapore', 'slovakia',
+        'slovenia', 'south_africa', 'south_korea', 'spain', 'sweden', 'thailand', 'ukraine',
+        'united_arab_emirates', 'united_kingdom', 'united_states', 'venezuela', 'vietnam'
       ]
     end
 
@@ -121,11 +123,11 @@ module NationalHolidays
     end
 
     def self.to_class_format(str)
-      str.to_s.tr("_", " ").split.map(&:capitalize).join('')
+      str.to_s.tr('_', ' ').split.map(&:capitalize).join('')
     end
 
     def self.to_human_format(str)
-      str.to_s.tr("_", " ").split.map(&:capitalize).join(' ')
+      str.to_s.tr('_', ' ').split.map(&:capitalize).join(' ')
     end
 
     def self.reverse_search_row_selector(row, str)
