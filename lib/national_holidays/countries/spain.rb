@@ -306,6 +306,21 @@ module NationalHolidays
       # Reference: http://www.calendarioslaborales.com/calendario-laboral-sevilla-2017.htm
       def sevilla
 
+        NationalHoliday.new(Date.new(2017, 1, 1), "Año Nuevo", "New Year's Day"),
+        NationalHoliday.new(Date.new(2017, 1, 6), "Epifanía del Señor", "Lord's Epiphany"),
+        NationalHoliday.new(Date.new(2017, 2, 28), "Día de Andalucía", "Andalucia's Day"),
+        NationalHoliday.new(Date.new(2017, 4, 13), "Jueves Santo", "Good Thursday"),
+        NationalHoliday.new(Date.new(2017, 4, 14), "Viernes Santo", "Good Friday"),
+        NationalHoliday.new(Date.new(2017, 5, 1), "Día del trabajo", "Labour Day"),
+        NationalHoliday.new(Date.new(2017, 5, 30), "San Fernando", "St. Ferdinand's Day"),
+        NationalHoliday.new(Date.new(2017, 6, 15), "Corpus Christi", "Corpus Christi"),
+        NationalHoliday.new(Date.new(2017, 8, 15), "Asunción de la Virgen", "Assumption of Mary"),
+        NationalHoliday.new(Date.new(2017, 10, 12), "Fiesta Nacional de España", "National Day of Spain"),
+        NationalHoliday.new(Date.new(2017, 11, 1), "Todos los Santos", "All Saints"),
+        NationalHoliday.new(Date.new(2017, 12, 6), "Día de la Constitución Española", "Spanish Contitution's Day"),
+        NationalHoliday.new(Date.new(2017, 12, 8), "Immaculada Concepción", "Immaculate Conception Day"),
+        NationalHoliday.new(Date.new(2017, 12, 25), "Dia de Navidad", "Christmas Day"),
+
         NationalHoliday.new(Date.new(2018, 1, 1), "Año Nuevo", "New Year's Day"),
         NationalHoliday.new(Date.new(2018, 1, 6), "Epifanía del Señor", "Lord's Epiphany"),
         NationalHoliday.new(Date.new(2018, 2, 28), "Día de Andalucía", "Andalucia's Day"),
