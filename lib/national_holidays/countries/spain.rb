@@ -13,7 +13,8 @@ module NationalHolidays
           Region.new('Andalucía', 'spain03', self.andalucia),
           Region.new('Comunidad Valenciana', 'spain04', self.comunidad_valenciana),
           Region.new('Sevilla', 'spain05', self.sevilla),
-          Region.new('Bilbao', 'spain06', self.bilbao)
+          Region.new('Bilbao', 'spain06', self.bilbao),
+          Region.new('Tenerife', 'spain07', self.tenerife),
 
           #Region.new('Aragón', 'spain05', self.aragon),
           #Region.new('Asturias', 'spain06', self.asturias),
@@ -464,6 +465,38 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2020, 12, 6), "Día de la Constitución Española", "Spanish Contitution's Day"),
           NationalHoliday.new(Date.new(2020, 12, 8), "Immaculada Concepción", "Immaculate Conception Day"),
           NationalHoliday.new(Date.new(2020, 12, 25), "Dia de Navidad", "Christmas Day"),
+        ]
+      end
+
+      def tenerife
+        [
+          NationalHoliday.new(Date.new(2018, 1, 1), "Año Nuevo", "New Year's Day"),
+          NationalHoliday.new(Date.new(2018, 1, 6), "Epifanía del Señor", "Lord's Epiphany"),
+          NationalHoliday.new(Date.new(2018, 3, 29), "Jueves Santo", "Good Thursday"),
+          NationalHoliday.new(Date.new(2018, 3, 30), "Viernes Santo", "Good Friday"),
+          NationalHoliday.new(Date.new(2018, 5, 1), "Día del trabajo", "Labour Day"),
+          NationalHoliday.new(Date.new(2018, 5, 3), "Día de la Cruz", "Día de la Cruz"),
+          NationalHoliday.new(Date.new(2018, 5, 3), "Día de las Canarias", "Day of Canarias"),
+          NationalHoliday.new(Date.new(2018, 6, 25), "San Juan", "St. Joseph's Day"),
+          NationalHoliday.new(Date.new(2018, 8, 15), "Asunción de la Virgen", "Assumption of Mary"),
+          NationalHoliday.new(Date.new(2018, 10, 12), "Fiesta Nacional de España", "National Day of Spain"),
+          NationalHoliday.new(Date.new(2018, 11, 1), "Todos los Santos", "All Saints"),
+          NationalHoliday.new(Date.new(2018, 12, 6), "Día de la Constitución Española", "Spanish Contitution's Day"),
+          NationalHoliday.new(Date.new(2018, 12, 8), "Immaculada Concepción", "Immaculate Conception Day"),
+          NationalHoliday.new(Date.new(2018, 12, 25), "Dia de Navidad", "Christmas Day"),
+
+          NationalHoliday.new(Date.new(2019, 1, 1), "Año Nuevo", "New Year's Day"),
+          NationalHoliday.new(Date.new(2019, 1, 7), "Epifanía del Señor", "Lord's Epiphany"),
+          NationalHoliday.new(Date.new(2019, 5, 1), "Día del trabajo", "Labour Day"),
+          NationalHoliday.new(Date.new(2019, 5, 3), "Día de la Cruz", "Día de la Cruz"),
+          NationalHoliday.new(Date.new(2019, 5, 30), "Día de la Canarias", "Día of Canarias"),
+          NationalHoliday.new(Date.new(2019, 6, 24), "San Juan", "St. Joseph's Day"),
+          NationalHoliday.new(Date.new(2019, 8, 15), "Asunción de la Virgen", "Assumption of Mary"),
+          NationalHoliday.new(Date.new(2019, 10, 12), "Fiesta Nacional de España", "National Day of Spain"),
+          NationalHoliday.new(Date.new(2019, 11, 1), "Todos los Santos", "All Saints"),
+          NationalHoliday.new(Date.new(2019, 12, 6), "Día de la Constitución Española", "Spanish Contitution's Day"),
+          NationalHoliday.new(Date.new(2019, 12, 9), "Immaculada Concepción", "Immaculate Conception Day"),
+          NationalHoliday.new(Date.new(2019, 12, 25), "Dia de Navidad", "Christmas Day"),
         ]
       end
     end
