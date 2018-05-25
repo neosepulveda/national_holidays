@@ -9,7 +9,7 @@ module NationalHolidays
       end
 
       def initialize
-        @regions = [ Region.new('Isle of Man', 'isleofman01', isle_of_man) ]
+        @regions = [ Region.new('Isle of Man', 'isle_of_man01', isle_of_man) ]
       end
 
       def isle_of_man
