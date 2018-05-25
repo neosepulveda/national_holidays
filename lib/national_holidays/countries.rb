@@ -103,16 +103,13 @@ module NationalHolidays
     end
 
     def self.region(region)
-      #country = self.reverse_search(region)
-      country = region.gsub(/[^a-zA-Z_ ]/,'') #removes last digits
+      country = self.reverse_search(region)
 
       self.country(country).region(region) unless country.nil?
     end
 
     def self.reverse_search(region)
-      country = self.countries_and_regions.select { |row| self.reverse_search_row_selector(row, region) }
-
-      country.first[:country] unless country.empty?
+      region.gsub(/[^a-zA-Z_ ]/,'')
     end
 
     def self.countries_and_regions
