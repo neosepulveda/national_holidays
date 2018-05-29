@@ -9,7 +9,7 @@ module NationalHolidays
       end
 
       def default
-        self.malaysia
+        self.regions.first
       end
 
       def malaysia

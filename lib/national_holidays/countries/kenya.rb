@@ -3,14 +3,14 @@ module NationalHolidays
     class Kenya < Country
 
       def default
-        self.nairobi_county
+        self.regions.first
       end
 
       def initialize
         @regions = [ Region.new('Kenya (all)', 'kenya01', self.nairobi_county) ]
       end
 
-      def  nairobi_county
+      def nairobi_county
         [
           NationalHoliday.new(Date.new(2016, 1, 1), "New Year's Day", "New Year's Day"),
           NationalHoliday.new(Date.new(2016, 3, 25), "Good Friday", "Good Friday"),
