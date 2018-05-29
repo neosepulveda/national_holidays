@@ -15,10 +15,10 @@ module NationalHolidays
           Region.new('Sevilla', 'spain05', self.sevilla),
           Region.new('Bilbao', 'spain06', self.bilbao),
           Region.new('Tenerife', 'spain07', self.tenerife),
+          Region.new('Baleares', 'spain07', self.baleares),
 
           #Region.new('Aragón', 'spain05', self.aragon),
           #Region.new('Asturias', 'spain06', self.asturias),
-          #Region.new('Baleares', 'spain07', self.baleares),
           #Region.new('Canarias', 'spain08', self.canarias),
 
           #Region.new('Cantabria', 'spain09', self.cantabria),
@@ -497,6 +497,24 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2019, 12, 6), "Día de la Constitución Española", "Spanish Contitution's Day"),
           NationalHoliday.new(Date.new(2019, 12, 9), "Immaculada Concepción", "Immaculate Conception Day"),
           NationalHoliday.new(Date.new(2019, 12, 25), "Dia de Navidad", "Christmas Day"),
+        ]
+      end
+
+      def baleares
+        [
+          NationalHoliday.new(Date.new(2018, 1, 1), 'Fin de Año', "New Year's Day"),
+          NationalHoliday.new(Date.new(2018, 1, 6), 'Epifanía del Señor', 'Epiphany'),
+          NationalHoliday.new(Date.new(2018, 3, 1), 'Día de las Islas Baleares', 'Balearic Day'),
+          NationalHoliday.new(Date.new(2018, 3, 29), 'Jueves Santo', 'Holy Thursday'),
+          NationalHoliday.new(Date.new(2018, 3, 30), 'Viernes Santo', 'Good Friday'),
+          NationalHoliday.new(Date.new(2018, 4, 2), 'Lunes de Pascua', 'Easter Monday'),
+          NationalHoliday.new(Date.new(2018, 5, 1), 'Fiesta del Trabajo', 'Labour Day'),
+          NationalHoliday.new(Date.new(2018, 8, 15), 'Asunción de Maria', 'Assumption Day'),
+          NationalHoliday.new(Date.new(2018, 10, 12), 'Fiesta Nacional', 'Hispanic Day'),
+          NationalHoliday.new(Date.new(2018, 11, 1), 'Día de Tots Sants', 'All Saints Day'),
+          NationalHoliday.new(Date.new(2018, 12, 6), 'Día de la Constitución', 'Constitution Day'),
+          NationalHoliday.new(Date.new(2018, 12, 8), 'Immaculada Concepción', 'Immaculate Conception Day'),
+          NationalHoliday.new(Date.new(2018, 12, 25), 'Día de Navidad', 'Christmas Day'),
         ]
       end
     end
