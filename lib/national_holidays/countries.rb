@@ -72,6 +72,7 @@ require 'national_holidays/countries/macedonia'
 require 'national_holidays/countries/philippines'
 require 'national_holidays/countries/uruguay'
 require 'national_holidays/countries/nigeria'
+require 'national_holidays/countries/taiwan'
 
 module NationalHolidays
   module Countries
@@ -95,7 +96,7 @@ module NationalHolidays
         'jamaica', 'japan', 'kenya', 'kuwait', 'latvia', 'lithuania', 'luxembourg', 'macedonia', 'malaysia', 'malta',
         'mexico', 'moldova', 'monaco', 'myanmar', 'netherlands', 'new_zealand', 'nigeria', 'norway', 'pakistan', 'philippines',
         'poland', 'portugal', 'romania', 'russia', 'saudi_arabia', 'serbia', 'singapore', 'slovakia',
-        'slovenia', 'south_africa', 'south_korea', 'spain', 'sweden', 'thailand', 'ukraine',
+        'slovenia', 'south_africa', 'south_korea', 'spain', 'sweden', 'taiwan', 'thailand', 'ukraine',
         'united_arab_emirates', 'united_kingdom', 'united_states', 'uruguay', 'venezuela', 'vietnam'
       ]
     end
