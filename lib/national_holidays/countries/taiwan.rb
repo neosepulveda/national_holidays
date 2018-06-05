@@ -24,7 +24,7 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2018, 4, 4), "Childrens Day", "Children's Day"),
           NationalHoliday.new(Date.new(2018, 4, 5), "Tomb Sweeping Day", "Tomb Sweeping Day"),
           NationalHoliday.new(Date.new(2018, 4, 6), "Tomb Sweeping Day Holiday", "Tomb Sweeping Day Holiday"),
-          NationalHoliday.new(Date.new(2018, 6, 18), "Dragon Boat Festival", "Tuen Ng Festival"),
+          NationalHoliday.new(Date.new(2018, 6, 18), "Tuen Ng Festival", "Dragon Boat Festival"),
           NationalHoliday.new(Date.new(2018, 9, 24), "Mid Autumn Festival", "Mid Autumn Festival"),
           NationalHoliday.new(Date.new(2018, 10, 10), "National Day", "National Day"),
           NationalHoliday.new(Date.new(2018, 12, 31), "Republic Day Holiday", "Republic Day Holiday"),
