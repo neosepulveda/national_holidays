@@ -9,7 +9,8 @@ module NationalHolidays
       def initialize
         @regions = [
           Region.new('Alsace', 'france01', self.alsace),
-          Region.new('Moselle', 'france02', self.moselle)
+          Region.new('Moselle', 'france02', self.moselle),
+          Region.new('Metropolitan', 'france03', self.metropolitan),
         ]
       end
 
@@ -802,7 +803,22 @@ module NationalHolidays
           NationalHoliday.new(Date.new(2040, 12, 26), "Saint Etienne", "St Stephen's Day")
         ]
       end
-      
+
+      def metropolitan
+        [
+          NationalHoliday.new(Date.new(2018, 1, 1), "Jour de l'an", "New Year's Day"),
+          NationalHoliday.new(Date.new(2018, 4, 2), 'Lundi de Pâques', 'Easter Monday'),
+          NationalHoliday.new(Date.new(2018, 5, 1), 'Fête du Travail', 'Labour Day'),
+          NationalHoliday.new(Date.new(2018, 5, 8), '8 Mai 1945', 'Victory in Europe Day'),
+          NationalHoliday.new(Date.new(2018, 5, 10), "Jeudi de l'Ascension", 'Ascension Thursday'),
+          NationalHoliday.new(Date.new(2018, 5, 21), 'Lundi de Pentecôte', 'Pentecost Monday'),
+          NationalHoliday.new(Date.new(2018, 7, 14), 'Fête Nationale', 'National Holiday'),
+          NationalHoliday.new(Date.new(2018, 8, 15), 'Assomption', 'Assumption'),
+          NationalHoliday.new(Date.new(2018, 11, 1), 'La Toussaint', 'All Saints'),
+          NationalHoliday.new(Date.new(2018, 11, 11), 'Armistice', 'Armistice Day'),
+          NationalHoliday.new(Date.new(2018, 12, 25), 'Noël', 'Christmas Day'),
+        ]
+      end
     end
   end
 end
