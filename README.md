@@ -1,3 +1,9 @@
+# WARNING - this gem is deprecated
+
+This gem is no longer maintained. For the latest national holidays updates use [national-holidays-ruby](https://github.com/CharlieHR/national-holidays-ruby) based on the configuration in [national-holidays-config](https://github.com/CharlieHR/national-holidays-config).
+
+--------------
+
 # NationalHolidays
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/national_holidays`. To experiment with that code, run `bin/console` for an interactive prompt.
