@@ -12,7 +12,7 @@ module NationalHolidays
           Region.new('British Columbia', 'canada02', self.british_columbia),
           Region.new('Manitoba', 'canada03', self.manitoba),
           Region.new('New Brunswick', 'canada04', self.new_brunswick),
-          Region.new('Newfoundland and Labrador5', 'canada0', self.newfoundland_and_labrador),
+          Region.new('Newfoundland and Labrador', 'canada0', self.newfoundland_and_labrador),
           Region.new('Northwest Territories', 'canada06', self.northwest_territories),
           Region.new('Nova Scotia', 'canada07', self.nova_scotia),
           Region.new('Nunavut', 'canada08', self.nunavut),
